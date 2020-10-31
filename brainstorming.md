@@ -63,7 +63,7 @@ Favicon
 
 - Contact
 
-- Portfolio?
+- Projects?
 
 Should About/Skills be on Home?
 
@@ -72,6 +72,40 @@ Should About/Skills be on Home?
 something like Hi I'm Andrew (Hi I'm jack) - Junior Full Stack Developer - Contact me!? This could also link to Projects page if implemented
 
 See [https://jacekjeznach.com/](https://jacekjeznach.com/)
+
+Should my intro section fade in one by one if I have time to implement this?
+
+Evenly space menu bar
+
+#### About
+
+Photo of me?
+
+Bigger icons with larger screen size, more icons per row with larger screen size
+
+#### Blog
+
+#### Blog Post
+
+This could potentially be a bit more interesting and feature some more responsive design
+
+#### Contact
+
+Message on Twitter, email and LinkedIn?
+
+For the email link, I might just add my email address rather than mailto. Every time I've come across a mailto it's tried to set up a mail client I don't use.
+
+Change submit button to whoosh? - Would this clash with the style and tone of the rest of my portfolio?
+
+Form fields:
+- First Name
+- Last Name
+- email address
+- Message
+
+#### Projects
+
+Same layout as blog page. External links or links to separate pages? Can be resolved later
 
 ### Presentation
 
