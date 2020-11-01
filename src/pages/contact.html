@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- html in the head is not rendered on the page -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Fulton | Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" />
+</head>
+<!-- html in the body is rendered on the page -->
+<body>
+    <!-- Header content to appear at the top of every page -->
+    <header>
+        <h1>Andrew Fulton</h1>
+        <!-- navbar to appear at the top of every page -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pages/about.html">About</a>
+            <a href="pages/projects.html">Projects</a>
+            <a href="pages/blog.html">Blog</a>
+            <a href="pages/contact.html">Contact</a>
+        </nav>
+    </header>
+    <!-- Page Name -->
+    <h2 class="page-name">Contact Me</h2>
+    <section id="social-contact">
+        <a class="icon" id="twitter" href="https://twitter.com/theandrewfulton"><img src="../img/twitter.svg" alt="Twitter"></a>
+        <a class="icon" id="email" href = "mailto:theandrewfulton@gmail.com?subject = Hello&body = Message"><img src="../img/gmail.svg"></a>
+        <a class="icon" id="linkedin" href="https://www.linkedin.com/in/andrew-fulton-a713941b0/"><img src="../img/linkedin.svg" alt="LinkedIn"></a>
+    </section>
+    <!-- webform -->
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Smith"><br>
+        <label for="email">Email address:</label><br>
+        <input type="text" id="email" name="email" value="name@example.com"><br>
+        <label for="message">Your message:</label><br>
+        <textarea name="message" rows="10" cols="50">Hello there!</textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <!-- Footer content to appear at the bottom of every page-->
+    <footer>
+        <p>Copyright &#169; 2020 Andrew Fulton</p>
+    </footer>
+</body>
+</html>

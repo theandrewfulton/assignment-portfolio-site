@@ -7,3 +7,4 @@ Add questions and clarifications regarding the Portfolio assignment here.
 - pages other than index.html in a pages directory?
 - Do I need a Projects page? Demonstrate skills and interests, get instructors opinion
 - Show links using Previous and Next between blog posts on sitemap?
+- To what degree does our form have to work? Can you just input text, click submit and nothing happens?
