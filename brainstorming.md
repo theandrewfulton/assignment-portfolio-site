@@ -83,11 +83,19 @@ Photo of me?
 
 Bigger icons with larger screen size, more icons per row with larger screen size
 
+Why did I want 4 social media buttons?
+
 #### Blog
+
+Fix HTML formatting for tabbing in/readability on this page. Prettier might catch it but I haven't noticed it reformatting anything
 
 #### Blog Post
 
 This could potentially be a bit more interesting and feature some more responsive design
+
+#### Projects
+
+Fix HTML formatting for tabbing in/readability on this page. Prettier might catch it but I haven't noticed it reformatting anything
 
 #### Contact
 
