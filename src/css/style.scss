@@ -1,15 +1,15 @@
 // Colour Palette - From https://coolors.co/0b090a-161a1d-660708-a4161a-ba181b-050b61-105e7f-1c2f4a-d3d3d3-ffffff
 /* SCSS HEX */
-$rich-black-fogra-39: #0b090aff;
-$eerie-black: #161a1dff;
-$blood-red: #660708ff;
+$background-colour: #0b090aff; 
+$element-background: #161a1dff;
+$highlight-red: #660708ff;
 $ruby-red: #a4161aff;
 $carnelian: #ba181bff;
 $midnight-blue: #050b61ff;
-$blue-sapphire: #105e7fff;
+$highlight-blue: #105e7fff;
 $prussian-blue: #1c2f4aff;
 $light-gray: #d3d3d3ff;
-$white: #ffffffff;
+$text-colour: #ffffffff;
 
 // Fonts
 // font-family: 'Amiri', serif;
@@ -18,6 +18,59 @@ $white: #ffffffff;
 
 // font-family: 'Quicksand', sans-serif;
 
+body {
+    background-color: $background-colour;
+    color: $text-colour;
+}
+a {
+    color: $text-colour;
+}
+
+// Navigation
+nav {
+    background-color: black;
+    position: fixed;
+    #nav-items {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: $element-background;
+        /* Toggle Show/Hide Menu */
+        display: none;
+    }
+    input:checked ~ #nav-items { display: block; }
+    a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 5px;
+    }
+    a:hover {
+        background-color: $highlight-blue;
+    }
+    .active {
+        background-color: $highlight-red;
+    }
+    /* Show Hamburger Icon */
+    label { 
+        display: inline-block; 
+        color: $text-colour;
+        background: $highlight-red;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 10px;
+    }
+}
+
+// Hamburger Menu
+
+/* hide checkbox */
+#hamburger {
+    display: none;
+}
+
+// Pictures and Icons
 #andrew-photo {
     width: 300px;
     height: auto;
@@ -26,3 +79,4 @@ $white: #ffffffff;
 .icon {
     height: 50px;
 }
+

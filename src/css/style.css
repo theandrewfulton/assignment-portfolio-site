@@ -1,4 +1,62 @@
 /* SCSS HEX */
+body {
+  background-color: #0b090aff;
+  color: #ffffffff;
+}
+
+a {
+  color: #ffffffff;
+}
+
+nav {
+  background-color: black;
+  position: fixed;
+  /* Show Hamburger Icon */
+}
+
+nav #nav-items {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #161a1dff;
+  /* Toggle Show/Hide Menu */
+  display: none;
+}
+
+nav input:checked ~ #nav-items {
+  display: block;
+}
+
+nav a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 5px;
+}
+
+nav a:hover {
+  background-color: #105e7fff;
+}
+
+nav .active {
+  background-color: #660708ff;
+}
+
+nav label {
+  display: inline-block;
+  color: #ffffffff;
+  background: #660708ff;
+  font-style: normal;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+/* hide checkbox */
+#hamburger {
+  display: none;
+}
+
 #andrew-photo {
   width: 300px;
   height: auto;
