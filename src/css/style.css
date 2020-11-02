@@ -6,11 +6,11 @@ body {
 
 a {
   color: #ffffffff;
+  text-decoration: none;
 }
 
 nav {
   background-color: black;
-  position: fixed;
   /* Show Hamburger Icon */
 }
 
@@ -31,7 +31,6 @@ nav input:checked ~ #nav-items {
 nav a {
   display: block;
   text-align: center;
-  text-decoration: none;
   padding: 5px;
 }
 
@@ -55,6 +54,121 @@ nav label {
 /* hide checkbox */
 #hamburger {
   display: none;
+}
+
+h1 {
+  font-family: "Caveat", cursive, sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+@-webkit-keyframes introduction {
+  0% {
+    color: #0b090aff;
+  }
+  100% {
+    color: #ffffffff;
+  }
+}
+
+@keyframes introduction {
+  0% {
+    color: #0b090aff;
+  }
+  100% {
+    color: #ffffffff;
+  }
+}
+
+@-webkit-keyframes introduction-button {
+  0% {
+    color: #0b090aff;
+    background-color: #0b090aff;
+  }
+  100% {
+    color: #ffffffff;
+    background-color: #050b61ff;
+  }
+}
+
+@keyframes introduction-button {
+  0% {
+    color: #0b090aff;
+    background-color: #0b090aff;
+  }
+  100% {
+    color: #ffffffff;
+    background-color: #050b61ff;
+  }
+}
+
+#introduction {
+  font-family: "Caveat", cursive, sans-serif;
+  color: #0b090aff;
+  text-align: center;
+}
+
+#introduction h2 {
+  -webkit-animation-name: introduction;
+          animation-name: introduction;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-size: 80px;
+}
+
+#introduction h3 {
+  -webkit-animation-name: introduction;
+          animation-name: introduction;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-size: 50px;
+}
+
+#introduction h4 {
+  -webkit-animation-name: introduction;
+          animation-name: introduction;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-size: 30px;
+}
+
+#introduction #intro-contact {
+  color: #0b090aff;
+  -webkit-animation-name: introduction-button;
+          animation-name: introduction-button;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  padding: 10px;
+  font-size: 25px;
+}
+
+#feature {
+  background-color: #161a1dff;
+}
+
+#feature h2 {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+}
+
+#feature h3 {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 25px;
 }
 
 #andrew-photo {

@@ -5,7 +5,7 @@ $element-background: #161a1dff;
 $highlight-red: #660708ff;
 $ruby-red: #a4161aff;
 $carnelian: #ba181bff;
-$midnight-blue: #050b61ff;
+$link-button: #050b61ff;
 $highlight-blue: #105e7fff;
 $prussian-blue: #1c2f4aff;
 $light-gray: #d3d3d3ff;
@@ -18,18 +18,23 @@ $text-colour: #ffffffff;
 
 // font-family: 'Quicksand', sans-serif;
 
+// This is overriding my nested headings. Is this
+// h2, h3, h4, {
+//     font-family: "Quicksand", sans-serif;
+// }
+
 body {
     background-color: $background-colour;
     color: $text-colour;
 }
 a {
     color: $text-colour;
+    text-decoration: none;
 }
 
 // Navigation
 nav {
     background-color: black;
-    position: fixed;
     #nav-items {
         list-style-type: none;
         margin: 0;
@@ -43,7 +48,6 @@ nav {
     a {
         display: block;
         text-align: center;
-        text-decoration: none;
         padding: 5px;
     }
     a:hover {
@@ -70,6 +74,75 @@ nav {
     display: none;
 }
 
+// Name in Header
+h1 {
+    font-family: "Caveat", cursive, sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+
+// Introduction Section
+
+// Introduction animations
+@keyframes introduction {
+    0% {color: $background-colour;}
+    100% {color: $text-colour;}
+}
+@keyframes introduction-button {
+    0% {color: $background-colour; background-color: $background-colour;}
+    100% {color: $text-colour; background-color: $link-button}
+}
+
+#introduction {
+    font-family: "Caveat", cursive, sans-serif;
+    color: $background-colour;
+    text-align: center;
+    h2 {
+        animation-name: introduction;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+        font-size: 80px;
+    }
+    h3 {
+        animation-name: introduction;
+        animation-duration: 5s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        font-size: 50px;
+    }
+    h4 {
+        animation-name: introduction;
+        animation-duration: 5s;
+        animation-delay: 5s;
+        animation-fill-mode: forwards;
+        font-size: 30px;
+    }
+    #intro-contact {
+        color: $background-colour;
+        animation-name: introduction-button;
+        animation-duration: 5s;
+        animation-delay: 7s;
+        animation-fill-mode: forwards;
+        padding: 10px;
+        font-size: 25px;
+    }
+    // get intro contact to change to hover colour when hovered over
+}
+
+// Feature section
+// figure out this h2
+#feature {
+    background-color: $element-background;
+    h2 {
+        text-align: center;
+        font-family: "Quicksand", sans-serif;
+    }
+    h3 {
+        text-align: center;
+        font-family: "Quicksand", sans-serif;
+        font-size: 25px;
+    }
+}
 // Pictures and Icons
 #andrew-photo {
     width: 300px;
@@ -77,6 +150,5 @@ nav {
 }
 
 .icon {
-    height: 50px;
+    height: 50px
 }
-
