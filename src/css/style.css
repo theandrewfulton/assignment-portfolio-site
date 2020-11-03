@@ -1,4 +1,12 @@
 /* SCSS HEX */
+h2, h3, h4 {
+  font-family: "Quicksand";
+}
+
+p {
+  font-family: "Amiri", Georgia, serif;
+}
+
 body {
   background-color: #0b090aff;
   color: #ffffffff;
@@ -17,7 +25,6 @@ nav {
 }
 
 nav #nav-items {
-  list-style-type: none;
   margin: 0;
   padding: 0;
   width: 200px;
@@ -106,12 +113,15 @@ h1 {
 }
 
 #introduction {
-  font-family: "Caveat", cursive, sans-serif;
   color: #0b090aff;
   text-align: center;
 }
 
-#introduction h2 {
+.introduction {
+  font-family: "Caveat", cursive, sans-serif;
+}
+
+h2 {
   -webkit-animation-name: introduction;
           animation-name: introduction;
   -webkit-animation-duration: 5s;
@@ -121,7 +131,7 @@ h1 {
   font-size: 80px;
 }
 
-#introduction h3 {
+h3 {
   -webkit-animation-name: introduction;
           animation-name: introduction;
   -webkit-animation-duration: 5s;
@@ -133,7 +143,7 @@ h1 {
   font-size: 50px;
 }
 
-#introduction h4 {
+h4 {
   -webkit-animation-name: introduction;
           animation-name: introduction;
   -webkit-animation-duration: 5s;
@@ -145,7 +155,7 @@ h1 {
   font-size: 30px;
 }
 
-#introduction #intro-contact {
+#intro-contact {
   color: #0b090aff;
   -webkit-animation-name: introduction-button;
           animation-name: introduction-button;
@@ -159,19 +169,40 @@ h1 {
   font-size: 25px;
 }
 
+.feature-heading {
+  text-align: center;
+}
+
 #feature {
   background-color: #161a1dff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
 }
 
-#feature h2 {
-  text-align: center;
-  font-family: "Quicksand", sans-serif;
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
-#feature h3 {
-  text-align: center;
-  font-family: "Quicksand", sans-serif;
-  font-size: 25px;
+img {
+  border: 2px solid #d3d3d3ff;
 }
 
 #andrew-photo {
@@ -181,5 +212,28 @@ h1 {
 
 .icon {
   height: 50px;
+}
+
+.project-img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    display: block;
+  }
+  #nav-items {
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    /* Toggle Show/Hide Menu */
+    display: block;
+  }
+  nav label {
+    display: none;
+  }
+  nav input:checked ~ #nav-items {
+    display: block;
+  }
 }
 /*# sourceMappingURL=style.css.map */
