@@ -35,6 +35,8 @@ a {
 // Navigation
 nav {
     background-color: black;
+    position: fixed;
+    top: 0;
     #nav-items {
         list-style-type: none;
         margin: 0;
@@ -74,11 +76,12 @@ nav {
     display: none;
 }
 
-// Name in Header
+// Name in Header - fix this, currently display-none!
 h1 {
     font-family: "Caveat", cursive, sans-serif;
     font-size: 50px;
     text-align: center;
+    display: none;
 }
 
 // Introduction Section
