@@ -16,25 +16,32 @@
         <h1>Andrew Fulton</h1>
         <!-- navbar to appear at the top of every page -->
         <nav>
-            <a href="index.html">Home</a>
-            <a href="pages/about.html">About</a>
-            <a href="pages/projects.html">Projects</a>
-            <a href="pages/blog.html">Blog</a>
-            <a href="pages/contact.html">Contact</a>
+            <label for="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger"/>
+            <div id="nav-items">
+                <a class="active" href="index.html">Home</a>
+                <a href="pages/about.html">About</a>
+                <a href="pages/projects.html">Projects</a>
+                <a href="pages/blog.html">Blog</a>
+                <a href="pages/contact.html">Contact</a>
+            </div>
         </nav>
     </header>
+    <!-- Section to format left margin 25% for tablet view -->
+    <section class=body-content>
     <!-- Introduction Section -->
-    <section id=introduction>
-        <h2>Hi</h2>
-        <h3>My name is Andrew</h3>
-        <h4>I'm a Junior Full-Stack Developer</h4>
-        <a href="pages/contact.html">Contact Me</a>
+    <section id="introduction">
+        <h2 class="introduction" id="intro1">Hi</h2>
+        <h3 class="introduction" id="intro2">My name is Andrew</h3>
+        <h4 class="introduction" id="intro3">I'm a Junior Full-Stack Developer</h4>
+        <a id="intro-contact" href="pages/contact.html">Contact Me</a>
     </section>
     <!-- Featured content - either a project or most recent blog post -->
-    <article id=feature>
-        <h2>Featured Project</h2>
-        <img class=project-img src="img/featured-500px.jpg" alt="image of featured project">
-        <h3>Lorem ipsum</h3>
+    <h2 class="feature-heading">Featured Project</h2>
+    <article id="feature">
+        <div><img class=project-img src="img/featured-full.jpg" alt="image of featured project">
+        </div>
+        <div class=flex2><h3>Lorem ipsum</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
              Etiam nec gravida ligula, a pharetra erat.
              Sed nec turpis ut leo malesuada varius et id lacus.
@@ -46,10 +53,12 @@
              Integer aliquet urna non orci viverra, vel gravida tortor aliquet.
              Fusce fringilla, quam pharetra feugiat varius, orci est dictum nisl, convallis imperdiet ante ipsum eu purus. </p>
         <a href="#">Visit</a>
+        </div>
     </article>
     <!-- Footer content to appear at the bottom of every page-->
     <footer>
         <p>Copyright &#169; 2020 Andrew Fulton</p>
     </footer>
+</section>
 </body>
 </html>
