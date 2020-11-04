@@ -43,6 +43,7 @@ nav a {
   display: block;
   text-align: center;
   padding: 5px;
+  border: 2px solid #d3d3d3ff;
 }
 
 nav a:hover {
@@ -72,6 +73,59 @@ h1 {
   font-size: 50px;
   text-align: center;
   display: none;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+img {
+  border: 2px solid #d3d3d3ff;
+}
+
+#andrew-photo {
+  width: 300px;
+  height: auto;
+}
+
+.icon {
+  height: 50px;
+}
+
+#html5 {
+  background-color: #E34F26;
+}
+
+#css3 {
+  background-color: #1572B6;
+}
+
+#linux {
+  background-color: #FCC624;
+}
+
+#twitter {
+  background-color: #1DA1F2;
+}
+
+#linkedin {
+  background-color: #0077B5;
+}
+
+#github {
+  background-color: #181717;
+}
+
+#gmail {
+  background-color: #D14836;
+}
+
+.project-img {
+  width: 100%;
+  max-width: 500px;
 }
 
 @-webkit-keyframes introduction {
@@ -201,31 +255,6 @@ h1 {
   text-align: center;
 }
 
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
-
-img {
-  border: 2px solid #d3d3d3ff;
-}
-
-#andrew-photo {
-  width: 300px;
-  height: auto;
-}
-
-.icon {
-  height: 50px;
-}
-
-.project-img {
-  width: 100%;
-  max-width: 500px;
-}
-
 @media only screen and (min-width: 768px) {
   h1 {
     display: block;
@@ -251,7 +280,7 @@ img {
   }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1280px) {
   nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -268,6 +297,7 @@ img {
         -ms-flex-direction: row;
             flex-direction: row;
     position: static;
+    width: 100%;
   }
   nav input:not(:checked) ~ #nav-items {
     display: -webkit-box;
@@ -278,6 +308,9 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .body-content {
+    margin-left: 0px;
   }
   #nav-items {
     display: -webkit-box;
@@ -291,12 +324,20 @@ img {
         -ms-flex-direction: row;
             flex-direction: row;
     width: 100%;
+    height: auto;
+    position: static;
   }
   h1 {
     margin-left: 0%;
   }
   .body-content {
     margin-left: 0%;
+  }
+  article {
+    width: 80%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
