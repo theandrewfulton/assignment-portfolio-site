@@ -347,7 +347,6 @@ img {
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 20px;
   flex-direction: row;
   position: static;
@@ -358,9 +357,10 @@ nav input:checked ~ #nav-items { display: flex; }
 .body-content {
     margin-left: 0px;
 }
-#nav-items {
+.nav-items {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     flex-direction: row;
     width: 100%;
     height: auto;
