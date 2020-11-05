@@ -3,6 +3,10 @@ h2, h3, h4, a {
   font-family: "Quicksand";
 }
 
+h2, h3, h4 {
+  text-align: center;
+}
+
 p {
   font-family: "Amiri", Georgia, serif;
 }
@@ -81,6 +85,7 @@ h1 {
 .page-name {
   font-size: 40px;
   text-align: center;
+  margin: 10px;
 }
 
 .footer {
@@ -136,6 +141,13 @@ img {
 .project-img {
   width: 100%;
   max-width: 500px;
+}
+
+.blog-img {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  display: block;
 }
 
 @-webkit-keyframes introduction {
@@ -297,18 +309,27 @@ img {
 }
 
 .blog-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
+  max-width: 100%;
+}
+
+.blog-preview {
+  margin: 5px;
+  border: 2px solid #d3d3d3ff;
+  padding: 10px;
+}
+
+.blog-preview a {
+  color: #ffffffff;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 5px;
+  border: 2px solid #d3d3d3ff;
+  background-color: #050b61ff;
+  width: 200px;
+  margin: auto;
 }
 
 @media only screen and (min-width: 768px) {
@@ -336,6 +357,23 @@ img {
   }
   .icon {
     height: 100px;
+  }
+  .blog-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .blog-preview {
+    max-width: 40%;
+    min-width: 225px;
   }
 }
 
@@ -397,6 +435,9 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .blog-preview {
+    width: 30%;
   }
 }
 /*# sourceMappingURL=style.css.map */
