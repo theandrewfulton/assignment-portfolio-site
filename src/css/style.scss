@@ -40,7 +40,10 @@ body {
     display: block;
     text-align: center;
     padding: 5px;
-
+    border: 2px solid $border-colour;
+    background-color: $link-button;
+    width: 200px;
+    
 }
 a {
     color: $text-colour;
@@ -49,6 +52,7 @@ a {
 
 // Navigation
 nav {
+    // Why "black" background?
     background-color: black;
     position: fixed;
     top: 0;
@@ -63,6 +67,7 @@ nav {
     input:checked ~ #nav-items { display: block; }
     a {
         @include link-button;
+        background-color: $highlight-red;
     }
     
     a:hover {
@@ -96,6 +101,66 @@ h1 {
     text-align: center;
     display: none;
 }
+
+// Page Name
+.page-name {
+    font-size: 40px;
+    text-align: center;
+}
+
+// Footer
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+// Pictures and Icons
+img {
+    border: 2px solid $border-colour;
+}
+#andrew-photo {
+    width: 300px;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.icon {
+    height: 50px;
+}
+
+// Icon Backgrounds
+
+#html5 {
+    background-color:#E34F26;
+}
+#css3 {
+    background-color: #1572B6;
+}
+#linux {
+    background-color: #FCC624;
+}
+#twitter {
+    background-color: #1DA1F2;
+}
+#linkedin {
+    background-color: #0077B5;
+}
+#github {
+    background-color: #181717;
+}
+#gmail {
+    background-color: #D14836;
+}
+
+.project-img {
+    width: 100%;
+    max-width: 500px;
+}
+
+// Homepage
 
 // Introduction Section
 
@@ -166,29 +231,22 @@ h1 {
     }
 }
 
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
 
-// Pictures and Icons
-img {
-    border: 2px solid $border-colour;
+// About Page
+// Social Media Icons
+.icon-flex {
+    display: flex;
+    flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
 }
-#andrew-photo {
-    width: 300px;
-    height: auto;
+#history-interests{
+    background-color: $element-background;
 }
-
-.icon {
-    height: 50px
-}
-
-.project-img {
-    width: 100%;
-    max-width: 500px;
+#resume {
+    @include link-button;
+    margin: auto;
 }
 
 // Media Query for Tablets
@@ -216,24 +274,33 @@ img {
     .body-content {
         margin-left: 25%;
     }
+    .icon {
+        height: 100px;
+    }
 }
 // Media Query for Large Screens
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1280px) {
 nav {
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
   flex-direction: row;
   position: static;
+  width: 100%;
 }
 nav input:not(:checked) ~ #nav-items { display: flex; }
 nav input:checked ~ #nav-items { display: flex; }
+.body-content {
+    margin-left: 0px;
+}
 #nav-items {
     display: flex;
     align-items: center;
     flex-direction: row;
     width: 100%;
+    height: auto;
+    position: static;
 }
 h1 {
     margin-left: 0%;
@@ -241,5 +308,9 @@ h1 {
    // Avoid menu overlapping content in tablet view
    .body-content {
     margin-left: 0%;
+}
+article {
+    width: 80%;
+    justify-content:center;
 }
 }
