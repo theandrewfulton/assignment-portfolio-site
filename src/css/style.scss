@@ -41,7 +41,9 @@ body {
     text-align: center;
     padding: 5px;
     border: 2px solid $border-colour;
-
+    background-color: $link-button;
+    width: 200px;
+    
 }
 a {
     color: $text-colour;
@@ -50,6 +52,7 @@ a {
 
 // Navigation
 nav {
+    // Why "black" background?
     background-color: black;
     position: fixed;
     top: 0;
@@ -64,6 +67,7 @@ nav {
     input:checked ~ #nav-items { display: block; }
     a {
         @include link-button;
+        background-color: $highlight-red;
     }
     
     a:hover {
@@ -98,6 +102,12 @@ h1 {
     display: none;
 }
 
+// Page Name
+.page-name {
+    font-size: 40px;
+    text-align: center;
+}
+
 // Footer
 .footer {
     position: fixed;
@@ -113,10 +123,12 @@ img {
 #andrew-photo {
     width: 300px;
     height: auto;
+    margin: auto;
+    display: block;
 }
 
 .icon {
-    height: 50px
+    height: 50px;
 }
 
 // Icon Backgrounds
@@ -147,6 +159,8 @@ img {
     width: 100%;
     max-width: 500px;
 }
+
+// Homepage
 
 // Introduction Section
 
@@ -217,6 +231,24 @@ img {
     }
 }
 
+
+// About Page
+// Social Media Icons
+.icon-flex {
+    display: flex;
+    flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+#history-interests{
+    background-color: $element-background;
+}
+#resume {
+    @include link-button;
+    margin: auto;
+}
+
 // Media Query for Tablets
 @media only screen and (min-width: 768px) {
     h1 {
@@ -241,6 +273,9 @@ img {
     // Avoid menu overlapping content in tablet view
     .body-content {
         margin-left: 25%;
+    }
+    .icon {
+        height: 100px;
     }
 }
 // Media Query for Large Screens
