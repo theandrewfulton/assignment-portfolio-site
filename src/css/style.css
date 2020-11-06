@@ -286,9 +286,9 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 20px;
 }
 
@@ -373,6 +373,32 @@ img {
   width: 100%;
 }
 
+label {
+  display: block;
+}
+
+input {
+  margin: 5px;
+}
+
+#contact-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form {
+  margin: auto;
+  width: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @media only screen and (min-width: 768px) {
   h1 {
     display: block;
@@ -426,9 +452,6 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     padding: 20px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -450,13 +473,15 @@ img {
   .body-content {
     margin-left: 0px;
   }
-  #nav-items {
+  .nav-items {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -479,6 +504,21 @@ img {
   }
   .blog-preview {
     width: 30%;
+  }
+  label {
+    display: inline;
+  }
+  #contact-flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #contact-icons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=style.css.map */
