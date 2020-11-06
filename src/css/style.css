@@ -373,6 +373,32 @@ img {
   width: 100%;
 }
 
+label {
+  display: block;
+}
+
+input {
+  margin: 5px;
+}
+
+#contact-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form {
+  margin: auto;
+  width: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @media only screen and (min-width: 768px) {
   h1 {
     display: block;
@@ -478,6 +504,21 @@ img {
   }
   .blog-preview {
     width: 30%;
+  }
+  label {
+    display: inline;
+  }
+  #contact-flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #contact-icons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=style.css.map */

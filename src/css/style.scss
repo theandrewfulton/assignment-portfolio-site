@@ -301,7 +301,24 @@ img {
     flex-wrap: wrap;
     width: 100%;
 }
-
+// Contact Page
+// Form label above fields
+label {
+    display: block;
+}
+input {
+    margin: 5px;
+}
+#contact-flex {
+    display: flex;
+    flex-direction: column;
+}
+// Form Alignment
+form {
+    margin: auto;
+    width: 80%;
+    align-items: center;
+}
 
 // Media Query for Tablets
 @media only screen and (min-width: 768px) {
@@ -379,5 +396,18 @@ article {
 }
 .blog-preview {
     width: 30%;
+}
+// Contact Page
+// Form label next to fields
+label {
+    display: inline;
+}
+// Move icons to the side
+#contact-flex {
+    flex-direction: row;
+}
+// Make icons vertical
+#contact-icons {
+    flex-direction: column;
 }
 }
