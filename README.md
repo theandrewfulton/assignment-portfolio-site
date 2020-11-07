@@ -16,7 +16,7 @@ The purpose of this portfolio site is to showcase my skills, projects, work hist
 
 ## Functionality and Features
 
-This site features responsive design sections and elements that adjust based on the size of the user's screen. It is also designed to be more easily acessible to visitors with screen readers, featuring semantic HTML throughout. Site security has also been considered, with Subresource Integrity implemented for links and resources throughout the site.
+This site features responsive design sections and elements that adjust based on the size of the user's screen. This is particularly noticable in the different menu layouts for phones, tablets and computers. It is also designed to be more easily acessible to visitors with screen readers, featuring semantic HTML throughout. Site security has also been considered, with Subresource Integrity implemented for links and resources throughout the site.
 
 The portfolio site contains a link to my Resume as a pdf on the About page and also features Projects and Blog pages, enabling me to showcase my achievements, knowledge and experience in the future, beyond just my Resume.
 
