@@ -304,20 +304,27 @@ img {
 // Contact Page
 // Form label above fields
 label {
-    display: block;
+    // Moves labels from alongside to on top of fields
+    display: flex;
+    // moves Your message label to top of message field
+    vertical-align: top;
 }
 input {
     margin: 5px;
+    // width: 50%;
+}
+#submit {
+    width: 100px;
 }
 #contact-flex {
     display: flex;
     flex-direction: column;
-}
-// Form Alignment
-form {
-    margin: auto;
-    width: 80%;
+    justify-content: center;
     align-items: center;
+}
+// // Form Alignment
+form {
+    width: 50%;
 }
 
 // Media Query for Tablets
@@ -400,7 +407,9 @@ article {
 // Contact Page
 // Form label next to fields
 label {
-    display: inline;
+    display: inline-block;
+    width: 130px;
+    text-align: right;
 }
 // Move icons to the side
 #contact-flex {
