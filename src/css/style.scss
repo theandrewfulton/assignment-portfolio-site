@@ -3,40 +3,55 @@
 $background-colour: #0b090aff; 
 $element-background: #161a1dff;
 $highlight-red: #660708ff;
-$ruby-red: #a4161aff;
-$carnelian: #ba181bff;
 $link-button: #050b61ff;
 $highlight-blue: #105e7fff;
-$prussian-blue: #1c2f4aff;
 $border-colour: #d3d3d3ff;
 $text-colour: #ffffffff;
 
-// Fonts
-// font-family: 'Amiri', serif;
+// Not used:
+// $ruby-red: #a4161aff;
+// $carnelian: #ba181bff;
+// $prussian-blue: #1c2f4aff;
 
-// font-family: 'Caveat', cursive;
+// Import Fonts from Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-// font-family: 'Quicksand', sans-serif;
-
-// This is overriding my nested headings. Is this
-// h2, h3, h4, {
-//     font-family: "Quicksand", sans-serif;
-// }
-
-h2, h3, h4, a {
-    font-family: "Quicksand";
-}
-h2, h3, h4 {
+// General Heading Styling
+// Name in Heading
+h1 {
+    font-family: "Caveat", cursive, sans-serif;
     text-align: center;
+    font-size: 50px;
+    // Not displayed on small screens
+    display: none;
+}
+
+h2, h3, h4{
+    font-family: "Quicksand", Arial, sans-serif;
+    text-align: center;
+}
+
+a {
+    font-family: "Quicksand", Arial, sans-serif;
+    text-decoration: none;
+}
+// Change background of links when hovered.
+// Can this be incorporated with the button rather than styling anchors?
+// Does it have to be up here?
+a:hover {
+    background-color: $highlight-blue;
 }
 p {
     font-family: "Amiri", Georgia, serif;
 }
 
+// Default styling for Body. Does this work?
 body {
     background-color: $background-colour;
     color: $text-colour;
 }
+
+// Mixin for Link Buttons
 @mixin link-button {
     color: $text-colour;
     text-decoration: none;
@@ -45,23 +60,17 @@ body {
     padding: 5px;
     border: 2px solid $border-colour;
     background-color: $link-button;
-    width: 200px;    
+    width: 200px;
 }
-a {
-    color: $text-colour;
-    text-decoration: none;
-}
-
 // Navigation
 nav {
-    // Why "black" background?
-    background-color: black;
     position: fixed;
     top: 0;
     #nav-items {
         margin: 0;
         padding: 0;
-        width: 200px;
+        // width: 200px;
+        width: 50%;
         background-color: $element-background;
         /* Toggle Show/Hide Menu */
         display: none;
@@ -70,10 +79,7 @@ nav {
     a {
         @include link-button;
         background-color: $highlight-red;
-    }
-    
-    a:hover {
-        background-color: $highlight-blue;
+        border: none;
     }
     .active {
         background-color: $highlight-red;
@@ -96,18 +102,9 @@ nav {
     display: none;
 }
 
-// Name in Header
-h1 {
-    font-family: "Caveat", cursive, sans-serif;
-    font-size: 50px;
-    text-align: center;
-    display: none;
-}
-
 // Page Name
 .page-name {
     font-size: 40px;
-    text-align: center;
     margin: 10px;
 }
 

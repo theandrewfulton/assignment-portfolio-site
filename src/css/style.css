@@ -1,10 +1,24 @@
 /* SCSS HEX */
-h2, h3, h4, a {
-  font-family: "Quicksand";
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+h1 {
+  font-family: "Caveat", cursive, sans-serif;
+  text-align: center;
+  font-size: 50px;
+  display: none;
 }
 
 h2, h3, h4 {
+  font-family: "Quicksand", Arial, sans-serif;
   text-align: center;
+}
+
+a {
+  font-family: "Quicksand", Arial, sans-serif;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #105e7fff;
 }
 
 p {
@@ -16,13 +30,7 @@ body {
   color: #ffffffff;
 }
 
-a {
-  color: #ffffffff;
-  text-decoration: none;
-}
-
 nav {
-  background-color: black;
   position: fixed;
   top: 0;
   /* Show Hamburger Icon */
@@ -31,7 +39,7 @@ nav {
 nav #nav-items {
   margin: 0;
   padding: 0;
-  width: 200px;
+  width: 50%;
   background-color: #161a1dff;
   /* Toggle Show/Hide Menu */
   display: none;
@@ -51,10 +59,7 @@ nav a {
   background-color: #050b61ff;
   width: 200px;
   background-color: #660708ff;
-}
-
-nav a:hover {
-  background-color: #105e7fff;
+  border: none;
 }
 
 nav .active {
@@ -75,16 +80,8 @@ nav label {
   display: none;
 }
 
-h1 {
-  font-family: "Caveat", cursive, sans-serif;
-  font-size: 50px;
-  text-align: center;
-  display: none;
-}
-
 .page-name {
   font-size: 40px;
-  text-align: center;
   margin: 10px;
 }
 
