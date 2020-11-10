@@ -36,17 +36,22 @@ nav {
   /* Show Hamburger Icon */
 }
 
-nav #nav-items {
+nav .nav-items {
   margin: 0;
   padding: 0;
-  width: 50%;
   background-color: #161a1dff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   /* Toggle Show/Hide Menu */
   display: none;
 }
 
-nav input:checked ~ #nav-items {
-  display: block;
+nav input:checked ~ .nav-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 nav a {
@@ -62,10 +67,6 @@ nav a {
   border: none;
 }
 
-nav .active {
-  background-color: #660708ff;
-}
-
 nav label {
   display: inline-block;
   color: #ffffffff;
@@ -75,9 +76,12 @@ nav label {
   padding: 10px;
 }
 
-/* hide checkbox */
 #hamburger {
   display: none;
+}
+
+.active {
+  background-color: #660708ff;
 }
 
 .page-name {
@@ -94,6 +98,7 @@ nav label {
 
 img {
   border: 2px solid #d3d3d3ff;
+  margin: auto;
 }
 
 #andrew-photo {
@@ -104,7 +109,31 @@ img {
 }
 
 .icon {
-  height: 50px;
+  width: 50px;
+  border: none;
+  margin: auto;
+}
+
+figure {
+  border: 2px solid #d3d3d3ff;
+  margin: 0;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+figure p {
+  margin: 2px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffffff;
 }
 
 #html5 {
@@ -419,9 +448,6 @@ form {
   nav label {
     display: none;
   }
-  nav input:not(:checked) ~ #nav-items {
-    display: block;
-  }
   a {
     margin: 10px;
   }
@@ -465,16 +491,6 @@ form {
             flex-direction: row;
     position: static;
     width: 100%;
-  }
-  nav input:not(:checked) ~ #nav-items {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  nav input:checked ~ #nav-items {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
   .body-content {
     margin-left: 0px;

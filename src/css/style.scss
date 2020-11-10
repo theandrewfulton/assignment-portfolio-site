@@ -66,23 +66,19 @@ body {
 nav {
     position: fixed;
     top: 0;
-    #nav-items {
+    .nav-items {
         margin: 0;
         padding: 0;
-        // width: 200px;
-        width: 50%;
         background-color: $element-background;
+        flex-direction: column;
         /* Toggle Show/Hide Menu */
         display: none;
     }
-    input:checked ~ #nav-items { display: block; }
+    input:checked ~ .nav-items { display: flex; }
     a {
         @include link-button;
         background-color: $highlight-red;
         border: none;
-    }
-    .active {
-        background-color: $highlight-red;
     }
     /* Show Hamburger Icon */
     label { 
@@ -97,9 +93,13 @@ nav {
 
 // Hamburger Menu
 
-/* hide checkbox */
+// hide checkbox
 #hamburger {
     display: none;
+}
+
+.active {
+    background-color: $highlight-red;
 }
 
 // Page Name
@@ -109,6 +109,7 @@ nav {
 }
 
 // Footer
+// Need to center footer text
 .footer {
     position: fixed;
     left: 0;
@@ -119,6 +120,7 @@ nav {
 // Pictures and Icons
 img {
     border: 2px solid $border-colour;
+    margin: auto;
 }
 #andrew-photo {
     width: 300px;
@@ -128,7 +130,25 @@ img {
 }
 
 .icon {
-    height: 50px;
+    width: 50px;
+    border: none;
+    margin: auto;
+    // WHY ARE THEY NOT CENTRED??? ARGH I'M SO MAD
+}
+
+figure {
+    border: 2px solid $border-colour;
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+        margin: 2px;
+        font-weight: bold;
+        text-align: center;
+        color: $text-colour;
+    }
 }
 
 // Icon Backgrounds
@@ -340,7 +360,7 @@ form {
     nav label { 
         display: none;
     }
-    nav input:not(:checked) ~ #nav-items { display: block; }
+    // nav input:not(:checked) ~ #nav-items { display: block; }
 
     a {
         margin: 10px;
@@ -373,8 +393,8 @@ nav {
   position: static;
   width: 100%;
 }
-nav input:not(:checked) ~ #nav-items { display: flex; }
-nav input:checked ~ #nav-items { display: flex; }
+// nav input:not(:checked) ~ #nav-items { display: flex; }
+// nav input:checked ~ #nav-items { display: flex; }
 .body-content {
     margin-left: 0px;
 }
