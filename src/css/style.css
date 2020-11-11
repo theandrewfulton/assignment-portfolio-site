@@ -33,12 +33,9 @@ body {
 nav {
   position: fixed;
   top: 0;
-  /* Show Hamburger Icon */
 }
 
-nav .nav-items {
-  margin: 0;
-  padding: 0;
+.nav-items {
   background-color: #161a1dff;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -48,13 +45,13 @@ nav .nav-items {
   display: none;
 }
 
-nav input:checked ~ .nav-items {
+input:checked ~ .nav-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-nav a {
+a {
   color: #ffffffff;
   text-decoration: none;
   display: block;
@@ -62,12 +59,13 @@ nav a {
   padding: 5px;
   border: 2px solid #d3d3d3ff;
   background-color: #050b61ff;
-  width: 200px;
+  width: 150px;
   background-color: #660708ff;
   border: none;
 }
 
-nav label {
+/* Show Hamburger Icon */
+label {
   display: inline-block;
   color: #ffffffff;
   background: #660708ff;
@@ -89,11 +87,9 @@ nav label {
   margin: 10px;
 }
 
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+footer {
   width: 100%;
+  text-align: center;
 }
 
 img {
@@ -112,21 +108,14 @@ img {
   width: 50px;
   border: none;
   margin: auto;
+  display: block;
 }
 
 figure {
   border: 2px solid #d3d3d3ff;
   margin: 0;
   padding: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: block;
 }
 
 figure p {
@@ -218,7 +207,7 @@ figure p {
 
 #introduction {
   color: #0b090aff;
-  min-height: 80vh;
+  min-height: 70vh;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -262,7 +251,6 @@ figure p {
 }
 
 #intro-contact {
-  color: #0b090aff;
   -webkit-animation-name: introduction-button;
           animation-name: introduction-button;
   -webkit-animation-duration: 5s;
@@ -273,10 +261,15 @@ figure p {
           animation-fill-mode: forwards;
   padding: 10px;
   font-size: 25px;
+  margin: auto;
 }
 
 .feature-heading {
   text-align: center;
+}
+
+#homepage-feature a {
+  margin: auto;
 }
 
 .icon-flex {
@@ -306,7 +299,7 @@ figure p {
   padding: 5px;
   border: 2px solid #d3d3d3ff;
   background-color: #050b61ff;
-  width: 200px;
+  width: 150px;
   margin: auto;
 }
 
@@ -331,7 +324,7 @@ figure p {
   padding: 5px;
   border: 2px solid #d3d3d3ff;
   background-color: #050b61ff;
-  width: 200px;
+  width: 150px;
   margin: auto;
 }
 
@@ -346,6 +339,7 @@ figure p {
   margin: auto;
   padding: 10px;
   border: 2px solid #d3d3d3ff;
+  background-color: #161a1dff;
 }
 
 .blog-post a {
@@ -356,7 +350,7 @@ figure p {
   padding: 5px;
   border: 2px solid #d3d3d3ff;
   background-color: #050b61ff;
-  width: 200px;
+  width: 150px;
   margin: 10px;
 }
 
@@ -415,14 +409,22 @@ form {
     display: block;
     margin-left: 25%;
   }
-  #nav-items {
+  .nav-items {
     width: 25%;
     height: 100%;
     position: fixed;
-    display: block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 100px;
   }
   nav label {
     display: none;
+  }
+  nav input:not(:checked) ~ .nav-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   a {
     margin: 10px;
@@ -447,46 +449,30 @@ form {
             justify-content: space-between;
   }
   .blog-preview {
+    display: block;
     max-width: 40%;
     min-width: 225px;
   }
 }
 
 @media only screen and (min-width: 1280px) {
-  nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 20px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    position: static;
-    width: 100%;
-  }
   .body-content {
     margin-left: 0px;
   }
   .nav-items {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     width: 100%;
     height: auto;
-    position: static;
+    padding: 0;
   }
   h1 {
     margin-left: 0%;

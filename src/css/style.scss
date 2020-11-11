@@ -60,15 +60,14 @@ body {
     padding: 5px;
     border: 2px solid $border-colour;
     background-color: $link-button;
-    width: 200px;
+    width: 150px;
 }
 // Navigation
 nav {
     position: fixed;
     top: 0;
+}
     .nav-items {
-        margin: 0;
-        padding: 0;
         background-color: $element-background;
         flex-direction: column;
         /* Toggle Show/Hide Menu */
@@ -89,7 +88,6 @@ nav {
         font-size: 1.2em;
         padding: 10px;
     }
-}
 
 // Hamburger Menu
 
@@ -109,12 +107,14 @@ nav {
 }
 
 // Footer
-// Need to center footer text
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+// Sticky vs at bottom of page - doesn't seem to be a one size fits all (see Contact page)
+footer {
+    // position: sticky;
+    // left: 0;
+    // bottom: 0;
     width: 100%;
+    text-align: center;
+    // background-color: $background-colour;
 }
 
 // Pictures and Icons
@@ -133,6 +133,7 @@ img {
     width: 50px;
     border: none;
     margin: auto;
+    display: block;
     // WHY ARE THEY NOT CENTRED??? ARGH I'M SO MAD
 }
 
@@ -140,9 +141,7 @@ figure {
     border: 2px solid $border-colour;
     margin: 0;
     padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     p {
         margin: 2px;
         font-weight: bold;
@@ -203,7 +202,7 @@ figure {
 #introduction {
     color: $background-colour;
     // issues with 80vh and tablet sizes - revisit
-    min-height: 80vh;
+    min-height: 70vh;
     text-align: center;
     margin-bottom: 50px;
 }
@@ -231,13 +230,13 @@ figure {
         font-size: 30px;
     }
     #intro-contact {
-        color: $background-colour;
         animation-name: introduction-button;
         animation-duration: 5s;
         animation-delay: 7s;
         animation-fill-mode: forwards;
         padding: 10px;
         font-size: 25px;
+        margin: auto;
     }
     // get intro contact to change to hover colour when hovered over
 
@@ -246,21 +245,11 @@ figure {
     text-align: center;
     }
     // Feature Section
-
-
-// #feature {
-//     background-color: $element-background;
-//     display: flex;
-//     flex-direction: column;
-//     flex-wrap: wrap;
-//     justify-content: center;
-//     align-items: center;
-//     align-content: space-between;
-//     h3 {
-//         text-align: center;
-//     }
-// }
-
+#homepage-feature {
+    a {
+        margin: auto;
+    }
+}
 
 // About Page
 // Social Media Icons
@@ -310,6 +299,7 @@ figure {
     margin: auto;
     padding: 10px;
     border: 2px solid $border-colour;
+    background-color: $element-background;
     a {
         @include link-button;
         margin: 10px;
@@ -355,16 +345,17 @@ form {
         margin-left: 25%;
     }
 
-    #nav-items {
+    .nav-items {
         width: 25%;
         height: 100%;
         position: fixed;
-        display: block;
+        align-items: center;
+        padding-top: 100px;
     }
     nav label { 
         display: none;
     }
-    // nav input:not(:checked) ~ #nav-items { display: block; }
+    nav input:not(:checked) ~ .nav-items { display: flex; }
 
     a {
         margin: 10px;
@@ -382,34 +373,25 @@ form {
         align-items: center;
         justify-content: space-between;
     }
-    .blog-preview {
+    .blog-preview {display: block;
         max-width: 40%;
         min-width: 225px;
     }
 }
 // Media Query for Large Screens
 @media only screen and (min-width: 1280px) {
-nav {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  flex-direction: row;
-  position: static;
-  width: 100%;
-}
-// nav input:not(:checked) ~ #nav-items { display: flex; }
-// nav input:checked ~ #nav-items { display: flex; }
 .body-content {
     margin-left: 0px;
 }
 .nav-items {
-    display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: row;
     width: 100%;
     height: auto;
-    position: static;
+    padding: 0;
+    // position: static;
+    // With position static the flexbox doesn't take the full width. Without it, my name is obscured
 }
 h1 {
     margin-left: 0%;
