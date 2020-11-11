@@ -202,7 +202,10 @@ figure {
 
 #introduction {
     color: $background-colour;
+    // issues with 80vh and tablet sizes - revisit
+    min-height: 80vh;
     text-align: center;
+    margin-bottom: 50px;
 }
 .introduction {
     font-family: "Caveat", cursive, sans-serif;
@@ -241,21 +244,22 @@ figure {
 // Feature Heading
 .feature-heading {
     text-align: center;
-    margin-top: 50px;
     }
     // Feature Section
-#feature {
-    background-color: $element-background;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: space-between;
-    h3 {
-        text-align: center;
-    }
-}
+
+
+// #feature {
+//     background-color: $element-background;
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     align-items: center;
+//     align-content: space-between;
+//     h3 {
+//         text-align: center;
+//     }
+// }
 
 
 // About Page
