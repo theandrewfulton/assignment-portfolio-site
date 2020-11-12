@@ -3,83 +3,59 @@
 $background-colour: #0b090aff; 
 $element-background: #161a1dff;
 $highlight-red: #660708ff;
-$ruby-red: #a4161aff;
-$carnelian: #ba181bff;
 $link-button: #050b61ff;
 $highlight-blue: #105e7fff;
-$prussian-blue: #1c2f4aff;
 $border-colour: #d3d3d3ff;
 $text-colour: #ffffffff;
 
-// Fonts
-// font-family: 'Amiri', serif;
+// Import Fonts from Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-// font-family: 'Caveat', cursive;
-
-// font-family: 'Quicksand', sans-serif;
-
-// This is overriding my nested headings. Is this
-// h2, h3, h4, {
-//     font-family: "Quicksand", sans-serif;
-// }
-
-h2, h3, h4, a {
-    font-family: "Quicksand";
+// General Heading Styling
+// Name in Heading
+h1 {
+    font-family: "Caveat", cursive, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    // Not displayed on small screens
+    display: none;
 }
-h2, h3, h4 {
+
+h2, h3, h4{
+    font-family: "Quicksand", Arial, sans-serif;
     text-align: center;
 }
+
+a {
+    font-family: "Quicksand", Arial, sans-serif;
+    text-decoration: none;
+}
+
 p {
     font-family: "Amiri", Georgia, serif;
 }
 
+// Default styling for Body. Does this work?
 body {
     background-color: $background-colour;
     color: $text-colour;
 }
-@mixin link-button {
-    color: $text-colour;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    padding: 5px;
-    border: 2px solid $border-colour;
-    background-color: $link-button;
-    width: 200px;    
-}
-a {
-    color: $text-colour;
-    text-decoration: none;
-}
 
 // Navigation
 nav {
-    // Why "black" background?
-    background-color: black;
     position: fixed;
     top: 0;
-    #nav-items {
-        margin: 0;
-        padding: 0;
-        width: 200px;
+}
+    .nav-items {
         background-color: $element-background;
+        flex-direction: column;
         /* Toggle Show/Hide Menu */
         display: none;
     }
-    input:checked ~ #nav-items { display: block; }
-    a {
-        @include link-button;
-        background-color: $highlight-red;
-    }
+    #hamburger:checked ~ .nav-items { display: flex; }
     
-    a:hover {
-        background-color: $highlight-blue;
-    }
-    .active {
-        background-color: $highlight-red;
-    }
     /* Show Hamburger Icon */
-    label { 
+    .hamburger { 
         display: inline-block; 
         color: $text-colour;
         background: $highlight-red;
@@ -87,41 +63,66 @@ nav {
         font-size: 1.2em;
         padding: 10px;
     }
-}
-
 // Hamburger Menu
 
-/* hide checkbox */
+// hide checkbox
 #hamburger {
     display: none;
 }
 
-// Name in Header
-h1 {
-    font-family: "Caveat", cursive, sans-serif;
-    font-size: 50px;
+// .active {
+//     background-color: $highlight-red;
+// }
+
+.link-button {
+    color: $text-colour;
+    text-decoration: none;
+    display: block;
     text-align: center;
-    display: none;
+    padding: 5px;
+    border: 2px solid $border-colour;
+    background-color: $link-button;
+    width: 150px;
+    margin: auto;
+    :hover {
+        background-color: $highlight-blue;
+    }
+}
+
+.nav-button {
+    color: $text-colour;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    background-color: $highlight-red;
+    width: 150px;
+    :hover {
+        background-color: $highlight-blue;
+    }
 }
 
 // Page Name
 .page-name {
     font-size: 40px;
-    text-align: center;
     margin: 10px;
 }
 
 // Footer
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+// Sticky vs at bottom of page - doesn't seem to be a one size fits all (see Contact page)
+footer {
+    // position: sticky;
+    // left: 0;
+    // bottom: 0;
     width: 100%;
+    text-align: center;
+    // background-color: $background-colour;
 }
 
 // Pictures and Icons
 img {
     border: 2px solid $border-colour;
+    margin: auto;
 }
 #andrew-photo {
     width: 300px;
@@ -131,7 +132,23 @@ img {
 }
 
 .icon {
-    height: 50px;
+    width: 50px;
+    border: none;
+    margin: 10px;
+    display: block;
+}
+
+figure {
+    border: 2px solid $border-colour;
+    margin: 10px;
+    padding: 5px;
+    display: block;
+    p {
+        margin: 2px;
+        font-weight: bold;
+        text-align: center;
+        color: $text-colour;
+    }
 }
 
 // Icon Backgrounds
@@ -145,10 +162,10 @@ img {
 #linux {
     background-color: #FCC624;
 }
-#twitter {
+.twitter {
     background-color: #1DA1F2;
 }
-#linkedin {
+.linkedin {
     background-color: #0077B5;
 }
 #github {
@@ -185,7 +202,10 @@ img {
 
 #introduction {
     color: $background-colour;
+    // issues with 80vh and tablet sizes - revisit
+    min-height: 70vh;
     text-align: center;
+    margin-bottom: 50px;
 }
 .introduction {
     font-family: "Caveat", cursive, sans-serif;
@@ -211,35 +231,25 @@ img {
         font-size: 30px;
     }
     #intro-contact {
-        color: $background-colour;
         animation-name: introduction-button;
         animation-duration: 5s;
         animation-delay: 7s;
         animation-fill-mode: forwards;
         padding: 10px;
         font-size: 25px;
+        margin: auto;
     }
-    // get intro contact to change to hover colour when hovered over
 
 // Feature Heading
 .feature-heading {
     text-align: center;
-    margin-top: 50px;
     }
     // Feature Section
-#feature {
-    background-color: $element-background;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: space-between;
-    h3 {
-        text-align: center;
+#homepage-feature {
+    a {
+        margin: auto;
     }
 }
-
 
 // About Page
 // Social Media Icons
@@ -251,11 +261,11 @@ img {
   padding: 20px;
 }
 #history-interests{
-    background-color: $element-background;
-}
-#resume {
-    @include link-button;
+    width: 80%;
     margin: auto;
+    padding: 10px;
+    border: 2px solid $border-colour;
+    background-color: $element-background;
 }
 
 // Projects Page
@@ -263,16 +273,20 @@ img {
     margin: 10px;
     padding: 10px;
     max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .blog-preview {
-    margin: 5px;
+    margin: 10px;
     border: 2px solid $border-colour;
     padding: 10px;
     background-color: $element-background;
-    a {
-        @include link-button;
-        margin: auto;
-    }
+    width: 300px;
+    // a {
+    //     @include link-button;
+    //     margin: auto;
+    // }
 }
 
 // Blog Page
@@ -289,10 +303,11 @@ img {
     margin: auto;
     padding: 10px;
     border: 2px solid $border-colour;
-    a {
-        @include link-button;
-        margin: 10px;
-    }
+    background-color: $element-background;
+    // a {
+    //     @include link-button;
+    //     margin: 10px;
+    // }
 }
 .post-bar {
     display: flex;
@@ -304,20 +319,36 @@ img {
 // Contact Page
 // Form label above fields
 label {
-    display: block;
+    // Moves labels from alongside to on top of fields
+    display: flex;
+    // moves Your message label to top of message field
+    vertical-align: top;
 }
+
 input {
     margin: 5px;
+}
+#submit {
+    width: 100px;
 }
 #contact-flex {
     display: flex;
     flex-direction: column;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid $border-colour;
+    background-color: $element-background;
 }
-// Form Alignment
+// // Form Alignment
 form {
     margin: auto;
-    width: 80%;
-    align-items: center;
+    text-align: center   
+}
+
+textarea {
+    width: 221px;
+    height: 150px;
 }
 
 // Media Query for Tablets
@@ -327,60 +358,46 @@ form {
         margin-left: 25%;
     }
 
-    #nav-items {
+    .nav-items {
         width: 25%;
         height: 100%;
         position: fixed;
-        display: block;
+        align-items: center;
+        padding-top: 100px;
     }
-    nav label { 
+    .hamburger { 
         display: none;
     }
-    nav input:not(:checked) ~ #nav-items { display: block; }
+    #hamburger:not(:checked) ~ .nav-items { display: flex; }
 
-    a {
+    .nav-button {
+        border: 2px solid $border-colour;
         margin: 10px;
     }
+    
     // Avoid menu overlapping content in tablet view
     .body-content {
         margin-left: 25%;
     }
-    .icon {
-        height: 100px;
-    }
-    .blog-list {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .blog-preview {
-        max-width: 40%;
-        min-width: 225px;
-    }
 }
 // Media Query for Large Screens
 @media only screen and (min-width: 1280px) {
-nav {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  flex-direction: row;
-  position: static;
-  width: 100%;
-}
-nav input:not(:checked) ~ #nav-items { display: flex; }
-nav input:checked ~ #nav-items { display: flex; }
 .body-content {
     margin-left: 0px;
 }
+nav {
+    width: 100%;
+    // why position static here?
+    position: static;
+}
 .nav-items {
-    display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: row;
     width: 100%;
     height: auto;
+    padding: 0;
+    // and why position static here?
     position: static;
 }
 h1 {
@@ -394,14 +411,14 @@ article {
     width: 80%;
     justify-content:center;
 }
-.blog-preview {
-    width: 30%;
-}
-// Contact Page
+
 // Form label next to fields
 label {
-    display: inline;
+    display: inline-block;
+    width: 130px;
+    text-align: right;
 }
+
 // Move icons to the side
 #contact-flex {
     flex-direction: row;

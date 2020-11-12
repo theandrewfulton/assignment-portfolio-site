@@ -7,7 +7,6 @@
     <title>Andrew Fulton | About</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../img/favicon.ico" />
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet" >
 </head>
 <!-- html in the body is rendered on the page -->
 <body>
@@ -16,26 +15,37 @@
         <h1>Andrew Fulton</h1>
         <!-- navbar to appear at the top of every page -->
         <nav>
-            <a href="../index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
+            <label class="hamburger" for="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger"/>
+            <div class="nav-items">
+                <a class="nav-button" href="../index.html">Home</a>
+                <a class="active nav-button" href="about.html">About</a>
+                <a class="nav-button" href="projects.html">Projects</a>
+                <a class="nav-button" href="blog.html">Blog</a>
+                <a class="nav-button" href="contact.html">Contact</a>
+            </div>
         </nav>
     </header>
      <!-- Section to format left margin 25% for tablet view -->
 <section class="body-content">
     <!-- Page Name -->
     <h2 class="page-name">About Me</h2>
+    <section id=about-intro></section>
     <!-- A picture of me and icons depicting my developer skills -->
-    <section id=about-intro>
      <img id=andrew-photo src="../img/andrew-photo.jpg" alt="a picture of Andrew Fulton">
      <section class="icon-flex">
-     <img class="icon" id="html5" src="../img/html5.svg" alt="HTML5">
-     <img class="icon" id="css3" src="../img/css3.svg" alt="CSS3">
+     <figure id="html5"> <img class="icon" src="../img/html5.svg" alt="HTML5">
+    <p>HTML5</p>
+    </figure>
+     <figure id="css3">
+     <img class="icon" src="../img/css3.svg" alt="CSS3">
+     <p>CSS</p>
+    </figure>
+    <figure id="linux">
      <img class="icon" id="linux" src="../img/linux.svg" alt="Linux">
-    </section>
- </section>
+     <p>Linux</p>
+     </figure>
+     </section>
  <!-- A section containing my history and interests, including a link to my Resume -->
  <section id="history-interests">
      <p>This is a paragraph about me that I really need to think about and add in later.
@@ -52,14 +62,21 @@
         Morbi luctus dignissim nisi, non efficitur ex laoreet et. Vestibulum elementum leo eget purus tristique efficitur.
         Nam et sem volutpat, placerat purus vel, posuere metus. Etiam cursus pretium pulvinar. Nullam sit amet est rhoncus, convallis libero et, bibendum leo. 
      </p>
-     <a id="resume" href="../resume/Andrew-Fulton.pdf"target="_blank">See my Resume</a>
+     <a class="link-button" href="../resume/Andrew-Fulton.pdf"target="_blank">See my Resume</a>
  </section>
  <!-- A section containing icon links to my professional social media -->
  <section class=icon-flex>
-     <a href="https://twitter.com/theandrewfulton"><img id="twitter" class="icon" src="../img/twitter.svg" alt="Twitter"></a>
-     <a href="https://www.linkedin.com/in/andrew-fulton-a713941b0/"><img id="linkedin" class="icon" src="../img/linkedin.svg" alt="LinkedIn"></a>
-     <a href="https://github.com/theandrewfulton"><img id="github" class="icon" src="../img/github.svg" alt="Github"></a>
+    <figure class="twitter"> 
+    <a href="https://twitter.com/theandrewfulton"><img class="icon" src="../img/twitter.svg" alt="Twitter"><p>Twitter</p></a>
+    </figure>
+    <figure class="linkedin">
+     <a href="https://www.linkedin.com/in/andrew-fulton-a713941b0/"><img class="icon" src="../img/linkedin.svg" alt="LinkedIn"><p>LinkedIn</p></a>
+    </figure>
+    <figure id="github">
+     <a href="https://github.com/theandrewfulton"><img class="icon" src="../img/github.svg" alt="GitHub"><p>GitHub</p></a>
+    </figure>
      <!-- Link to codepen? Wireframe shows four icons but I can't think of 4 links -->
+    </section>
  </section>
     <!-- Footer content to appear at the bottom of every page-->
     <footer>

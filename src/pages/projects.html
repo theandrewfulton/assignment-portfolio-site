@@ -7,7 +7,6 @@
     <title>Andrew Fulton | Projects</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../img/favicon.ico" />
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet" >
 </head>
 <!-- html in the body is rendered on the page -->
 <body>
@@ -16,13 +15,18 @@
         <h1>Andrew Fulton</h1>
         <!-- navbar to appear at the top of every page -->
         <nav>
-            <a href="../index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
+            <label class="hamburger" for="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger"/>
+            <div class="nav-items">
+                <a class="nav-button" href="../index.html">Home</a>
+                <a class="nav-button" href="about.html">About</a>
+                <a class="active nav-button" href="projects.html">Projects</a>
+                <a class="nav-button" href="blog.html">Blog</a>
+                <a class="nav-button" href="contact.html">Contact</a>
+            </div>
         </nav>
     </header>
+    <!-- Section to format left margin 25% for tablet view -->
     <section class="body-content">
     <!-- Page Name -->
     <h2 class="page-name">Projects</h2>
@@ -42,7 +46,7 @@
              Sed et elit nibh. Integer luctus eget leo ac posuere.
              Integer aliquet urna non orci viverra, vel gravida tortor aliquet.
              Fusce fringilla, quam pharetra feugiat varius, orci est dictum nisl, convallis imperdiet ante ipsum eu purus. </p>
-        <a href="#">Visit</a>
+        <a class="link-button" href="#">Visit</a>
     </article>
     <!-- Project #4-->
     <article class="blog-preview">
@@ -58,7 +62,7 @@
              Sed et elit nibh. Integer luctus eget leo ac posuere.
              Integer aliquet urna non orci viverra, vel gravida tortor aliquet.
              Fusce fringilla, quam pharetra feugiat varius, orci est dictum nisl, convallis imperdiet ante ipsum eu purus. </p>
-        <a href="#">Visit</a>
+        <a class="link-button" href="#">Visit</a>
     </article>
     <!-- Project #3-->
     <article class="blog-preview">
@@ -74,7 +78,7 @@
              Sed et elit nibh. Integer luctus eget leo ac posuere.
              Integer aliquet urna non orci viverra, vel gravida tortor aliquet.
              Fusce fringilla, quam pharetra feugiat varius, orci est dictum nisl, convallis imperdiet ante ipsum eu purus. </p>
-        <a href="#">Visit</a>
+        <a class="link-button" href="#">Visit</a>
     </article>
     <!-- Project #2-->
     <article class="blog-preview">
@@ -90,7 +94,7 @@
              Sed et elit nibh. Integer luctus eget leo ac posuere.
              Integer aliquet urna non orci viverra, vel gravida tortor aliquet.
              Fusce fringilla, quam pharetra feugiat varius, orci est dictum nisl, convallis imperdiet ante ipsum eu purus. </p>
-        <a href="#">Visit</a>
+        <a class="link-button" href="#">Visit</a>
     </article>
     <!-- Project #1-->
     <article class="blog-preview">
@@ -106,7 +110,7 @@
              Sed et elit nibh. Integer luctus eget leo ac posuere.
              Integer aliquet urna non orci viverra, vel gravida tortor aliquet.
              Fusce fringilla, quam pharetra feugiat varius, orci est dictum nisl, convallis imperdiet ante ipsum eu purus. </p>
-        <a href="#">Visit</a>
+        <a class="link-button" href="#">Visit</a>
     </article>
     </section>
     <!-- Footer content to appear at the bottom of every page-->

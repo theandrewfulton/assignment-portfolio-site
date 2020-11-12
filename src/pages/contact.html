@@ -15,25 +15,37 @@
         <h1>Andrew Fulton</h1>
         <!-- navbar to appear at the top of every page -->
         <nav>
-            <a href="../index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
+            <label class="hamburger" for="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger"/>
+            <div class="nav-items">
+                <a class="nav-button" href="../index.html">Home</a>
+                <a class="nav-button" href="about.html">About</a>
+                <a class="nav-button" href="projects.html">Projects</a>
+                <a class="nav-button" href="blog.html">Blog</a>
+                <a class="active nav-button" href="contact.html">Contact</a>
+            </div>
         </nav>
     </header>
-    <!-- Page Name -->
-    <h2 class="page-name">Contact Me</h2>
-    <!-- Flexbox for Contact icons to appear to the left on larger screens -->
-    <section id="contact-flex">
+     <!-- Section to format left margin 25% for tablet view -->
+    <section class="body-content">
+        <!-- Page Name -->
+        <h2 class="page-name">Contact Me</h2>
+        <!-- Flexbox for Contact icons to appear to the left on larger screens -->
+        <section id="contact-flex">
         <!-- Contact Icons -->
-    <section class="icon-flex" id="contact-icons">
-        <a href="https://twitter.com/theandrewfulton"><img id="twitter" class="icon" src="../img/twitter.svg" alt="Twitter"></a>
-        <a href = "mailto:theandrewfulton@gmail.com?subject = Hello&body = Message"><img  id="gmail" class="icon" src="../img/gmail.svg"></a>
-        <a href="https://www.linkedin.com/in/andrew-fulton-a713941b0/"><img id="linkedin" class="icon" src="../img/linkedin.svg" alt="LinkedIn"></a>
-    </section>
-    <!-- webform -->
-    <form>
+        <section class="icon-flex" id="contact-icons">
+        <figure class="twitter"> 
+            <a href="https://twitter.com/theandrewfulton"><img class="icon" src="../img/twitter.svg" alt="Twitter"><p>Twitter</p></a>
+            </figure>
+        <figure id="gmail">
+            <a href = "mailto:theandrewfulton@gmail.com?subject = Hello&body = Message"><img class="icon" src="../img/gmail.svg" alt ="Email"><p>Email</p></a>
+        </figure>
+        <figure class="linkedin">
+            <a href="https://www.linkedin.com/in/andrew-fulton-a713941b0/"><img class="icon" src="../img/linkedin.svg" alt="LinkedIn"><p>LinkedIn</p></a>
+           </figure>
+        </section>
+        <!-- webform -->
+        <form>
         <label for="fname">First name:</label>
         <input type="text" id="fname" name="fname" value="John"><br>
         <label for="lname">Last name:</label>
@@ -41,13 +53,14 @@
         <label for="email">Email address:</label>
         <input type="text" id="email" name="email" value="name@example.com"><br>
         <label for="message">Your message:</label>
-        <textarea name="message" rows="10" cols="50">Hello there!</textarea><br><br>
-        <input type="submit" value="Submit">
-    </form>
+        <textarea name="message">Hello there!</textarea><br><br>
+        <input id="submit" type="submit" value="Submit">
+        </form>
     </section>
     <!-- Footer content to appear at the bottom of every page-->
     <footer>
         <p>Copyright &#169; 2020 Andrew Fulton</p>
     </footer>
+    </section>
 </body>
 </html>
