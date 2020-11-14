@@ -30,6 +30,9 @@ a {
     font-family: "Quicksand", Arial, sans-serif;
     text-decoration: none;
 }
+a:hover {
+    background-color: $highlight-blue;
+}
 
 p {
     font-family: "Amiri", Georgia, serif;
@@ -84,9 +87,6 @@ nav {
     background-color: $link-button;
     width: 150px;
     margin: auto;
-    :hover {
-        background-color: $highlight-blue;
-    }
 }
 
 .nav-button {
@@ -97,12 +97,8 @@ nav {
     padding: 5px;
     background-color: $highlight-red;
     width: 150px;
-    :hover {
-        background-color: $highlight-blue;
     }
-}
-
-// Page Name
+    
 .page-name {
     font-size: 40px;
     margin: 10px;
@@ -151,34 +147,27 @@ figure {
     }
 }
 
+figure:hover {
+    background-color: $highlight-blue;
+}
+
 // Icon Backgrounds
 
-#html5 {
-    background-color:#E34F26;
+.icon1 {
+    background-color: $highlight-red;
 }
-#css3 {
-    background-color: #1572B6;
+.icon2 {
+    background-color: $highlight-blue;
 }
-#linux {
-    background-color: #FCC624;
-}
-.twitter {
-    background-color: #1DA1F2;
-}
-.linkedin {
-    background-color: #0077B5;
-}
-#github {
-    background-color: #181717;
-}
-#gmail {
-    background-color: #D14836;
+
+.icon2:hover {
+    background-color: $highlight-red;
 }
 
 .project-img {
     width: 100%;
     max-width: 500px;
-}
+} 
 
 .blog-img {
     width: 100%;
@@ -260,6 +249,7 @@ figure {
   justify-content: space-evenly;
   padding: 20px;
 }
+// History and Interests Section
 #history-interests{
     width: 80%;
     margin: auto;
@@ -267,7 +257,6 @@ figure {
     border: 2px solid $border-colour;
     background-color: $element-background;
 }
-
 // Projects Page
 .blog-list {
     margin: 10px;
@@ -331,6 +320,10 @@ input {
 #submit {
     width: 100px;
 }
+#submit:hover {
+    background-color: $highlight-blue;
+}
+
 #contact-flex {
     display: flex;
     flex-direction: column;
@@ -352,7 +345,7 @@ textarea {
 }
 
 // Media Query for Tablets
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (min-height: 300px) {
     h1 {
         display: block;
         margin-left: 25%;
@@ -363,7 +356,7 @@ textarea {
         height: 100%;
         position: fixed;
         align-items: center;
-        padding-top: 100px;
+        padding-top: 10vh;
     }
     .hamburger { 
         display: none;

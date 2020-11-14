@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  background-color: #105e7fff;
+}
+
 p {
   font-family: "Amiri", Georgia, serif;
 }
@@ -73,10 +77,6 @@ nav {
   margin: auto;
 }
 
-.link-button :hover {
-  background-color: #105e7fff;
-}
-
 .nav-button {
   color: #ffffffff;
   text-decoration: none;
@@ -85,10 +85,6 @@ nav {
   padding: 5px;
   background-color: #660708ff;
   width: 150px;
-}
-
-.nav-button :hover {
-  background-color: #105e7fff;
 }
 
 .page-name {
@@ -134,32 +130,20 @@ figure p {
   color: #ffffffff;
 }
 
-#html5 {
-  background-color: #E34F26;
+figure:hover {
+  background-color: #105e7fff;
 }
 
-#css3 {
-  background-color: #1572B6;
+.icon1 {
+  background-color: #660708ff;
 }
 
-#linux {
-  background-color: #FCC624;
+.icon2 {
+  background-color: #105e7fff;
 }
 
-.twitter {
-  background-color: #1DA1F2;
-}
-
-.linkedin {
-  background-color: #0077B5;
-}
-
-#github {
-  background-color: #181717;
-}
-
-#gmail {
-  background-color: #D14836;
+.icon2:hover {
+  background-color: #660708ff;
 }
 
 .project-img {
@@ -370,6 +354,10 @@ input {
   width: 100px;
 }
 
+#submit:hover {
+  background-color: #105e7fff;
+}
+
 #contact-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -395,7 +383,7 @@ textarea {
   height: 150px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (min-height: 300px) {
   h1 {
     display: block;
     margin-left: 25%;
@@ -407,7 +395,7 @@ textarea {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 100px;
+    padding-top: 10vh;
   }
   .hamburger {
     display: none;
