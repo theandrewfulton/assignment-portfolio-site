@@ -20,12 +20,12 @@ h1 {
     // Not displayed on small screens
     display: none;
 }
-
+// Basic Styling for other Headings
 h2, h3, h4{
     font-family: "Quicksand", Arial, sans-serif;
     text-align: center;
 }
-
+// General Anchor Styling (particularly for inline links and link buttons)
 a {
     font-family: "Quicksand", Arial, sans-serif;
     text-decoration: none;
@@ -33,17 +33,17 @@ a {
 a:hover {
     background-color: $highlight-blue;
 }
-
+// Basic Paragraph Styling
 p {
     font-family: "Amiri", Georgia, serif;
 }
 
-// Default styling for Body. Does this work?
+// Default styling for Body
 body {
     background-color: $background-colour;
     color: $text-colour;
+    margin: 0;
 }
-
 // Navigation
 nav {
     position: fixed;
@@ -56,8 +56,7 @@ nav {
         display: none;
     }
     #hamburger:checked ~ .nav-items { display: flex; }
-    
-    /* Show Hamburger Icon */
+        /* Show Hamburger Icon */
     .hamburger { 
         display: inline-block; 
         color: $text-colour;
@@ -67,16 +66,11 @@ nav {
         padding: 10px;
     }
 // Hamburger Menu
-
 // hide checkbox
 #hamburger {
     display: none;
 }
-
-// .active {
-//     background-color: $highlight-red;
-// }
-
+// Styling for Link Button Class
 .link-button {
     color: $text-colour;
     text-decoration: none;
@@ -88,7 +82,7 @@ nav {
     width: 150px;
     margin: auto;
 }
-
+// Styling for Nav Button Class
 .nav-button {
     color: $text-colour;
     text-decoration: none;
@@ -98,27 +92,32 @@ nav {
     background-color: $highlight-red;
     width: 150px;
     }
-    
+// Styling for the active class, showing the user which page they are on
+.active {
+    background-color: $element-background;
+}
+// Styling for page name
 .page-name {
     font-size: 40px;
     margin: 10px;
 }
-
 // Footer
-// Sticky vs at bottom of page - doesn't seem to be a one size fits all (see Contact page)
 footer {
-    // position: sticky;
-    // left: 0;
-    // bottom: 0;
     width: 100%;
     text-align: center;
     // background-color: $background-colour;
 }
-
 // Pictures and Icons
+// basic styling for all images
 img {
     border: 2px solid $border-colour;
     margin: auto;
+}
+.blog-img {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    display: block;
 }
 #andrew-photo {
     width: 300px;
@@ -126,14 +125,13 @@ img {
     margin: auto;
     display: block;
 }
-
 .icon {
     width: 50px;
     border: none;
     margin: 10px;
     display: block;
 }
-
+// Figure wrapper for icons
 figure {
     border: 2px solid $border-colour;
     margin: 10px;
@@ -146,34 +144,20 @@ figure {
         color: $text-colour;
     }
 }
-
+// Hover behaviour for figure
 figure:hover {
     background-color: $highlight-blue;
 }
-
-// Icon Backgrounds
-
+// Icon Backgrounds - alternating between red and blue
 .icon1 {
     background-color: $highlight-red;
 }
 .icon2 {
     background-color: $highlight-blue;
 }
-
+// icon 2 is already blue so will highlight red when hovered over
 .icon2:hover {
     background-color: $highlight-red;
-}
-
-.project-img {
-    width: 100%;
-    max-width: 500px;
-} 
-
-.blog-img {
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
-    display: block;
 }
 // Homepage
 
@@ -185,7 +169,7 @@ figure:hover {
     100% {color: $text-colour;}
 }
 @keyframes introduction-button {
-    0% {color: $background-colour; background-color: $background-colour;}
+    0% {color: $background-colour; background-color: $background-colour; border: none;}
     100% {color: $text-colour; background-color: $link-button}
 }
 
@@ -223,7 +207,7 @@ figure:hover {
         animation-name: introduction-button;
         animation-duration: 5s;
         animation-delay: 7s;
-        animation-fill-mode: forwards;
+        animation-fill-mode: backwards;
         padding: 10px;
         font-size: 25px;
         margin: auto;
@@ -233,11 +217,20 @@ figure:hover {
 .feature-heading {
     text-align: center;
     }
-    // Feature Section
+// Feature Section
 #homepage-feature {
     a {
         margin: auto;
     }
+}
+// Article styling
+article {
+    width: 80%;
+    justify-content:center;
+    margin: 10px auto;
+    padding: 10px;
+    border: 2px solid $border-colour;
+    background-color: $element-background;
 }
 
 // About Page
@@ -266,38 +259,13 @@ figure:hover {
     flex-wrap: wrap;
     justify-content: center;
 }
-.blog-preview {
-    margin: 10px;
-    border: 2px solid $border-colour;
-    padding: 10px;
-    background-color: $element-background;
-    width: 300px;
-    // a {
-    //     @include link-button;
-    //     margin: auto;
-    // }
-}
-
 // Blog Page
-
 .date {
     text-align: right;
     font-size: 12px;
     color: $border-colour;
 }
-
-// Blog Post
-.blog-post {
-    width: 80%;
-    margin: auto;
-    padding: 10px;
-    border: 2px solid $border-colour;
-    background-color: $element-background;
-    // a {
-    //     @include link-button;
-    //     margin: 10px;
-    // }
-}
+// buttons to navigate between posts
 .post-bar {
     display: flex;
     align-items: center;
@@ -306,24 +274,7 @@ figure:hover {
     width: 100%;
 }
 // Contact Page
-// Form label above fields
-label {
-    // Moves labels from alongside to on top of fields
-    display: flex;
-    // moves Your message label to top of message field
-    vertical-align: top;
-}
-
-input {
-    margin: 5px;
-}
-#submit {
-    width: 100px;
-}
-#submit:hover {
-    background-color: $highlight-blue;
-}
-
+// Flexbox for arrangement of elements on Contact page
 #contact-flex {
     display: flex;
     flex-direction: column;
@@ -333,24 +284,41 @@ input {
     border: 2px solid $border-colour;
     background-color: $element-background;
 }
+// Form label above fields
+label {
+    // Moves labels from alongside to on top of fields
+    display: flex;
+    // moves Your message label to top of message field
+    vertical-align: top;
+}
+// Space fields out
+input {
+    margin: 5px;
+}
+// styling for submit button
+#submit {
+    width: 100px;
+}
+#submit:hover {
+    background-color: $highlight-blue;
+}
 // // Form Alignment
 form {
     margin: auto;
     text-align: center   
 }
-
 textarea {
     width: 221px;
     height: 150px;
 }
-
 // Media Query for Tablets
 @media only screen and (min-width: 768px) and (min-height: 300px) {
+    // Show name heading and center for tablet view
     h1 {
         display: block;
         margin-left: 25%;
     }
-
+    //Adjust nav items menu for tablet view 
     .nav-items {
         width: 25%;
         height: 100%;
@@ -358,16 +326,20 @@ textarea {
         align-items: center;
         padding-top: 10vh;
     }
+    // hide hamburger menu
     .hamburger { 
         display: none;
     }
+    // show nav items even if the hamburger is not checked
     #hamburger:not(:checked) ~ .nav-items { display: flex; }
-
+    // Change styling of nav button
     .nav-button {
         border: 2px solid $border-colour;
         margin: 10px;
     }
-    
+    .blog-preview {
+        width: 300px;
+    }
     // Avoid menu overlapping content in tablet view
     .body-content {
         margin-left: 25%;
@@ -375,14 +347,16 @@ textarea {
 }
 // Media Query for Large Screens
 @media only screen and (min-width: 1280px) {
-.body-content {
+// move content back over
+    .body-content {
     margin-left: 0px;
 }
+// adjust nav
 nav {
     width: 100%;
-    // why position static here?
     position: static;
 }
+// adjust nav-items
 .nav-items {
     align-items: center;
     justify-content: space-evenly;
@@ -390,19 +364,15 @@ nav {
     width: 100%;
     height: auto;
     padding: 0;
-    // and why position static here?
     position: static;
 }
+// move name back over
 h1 {
     margin-left: 0%;
 }
-   // Avoid menu overlapping content in tablet view
+//    move body content back over
    .body-content {
     margin-left: 0%;
-}
-article {
-    width: 80%;
-    justify-content:center;
 }
 
 // Form label next to fields

@@ -28,6 +28,7 @@ p {
 body {
   background-color: #0b090aff;
   color: #ffffffff;
+  margin: 0;
 }
 
 nav {
@@ -87,6 +88,10 @@ nav {
   width: 150px;
 }
 
+.active {
+  background-color: #161a1dff;
+}
+
 .page-name {
   font-size: 40px;
   margin: 10px;
@@ -100,6 +105,13 @@ footer {
 img {
   border: 2px solid #d3d3d3ff;
   margin: auto;
+}
+
+.blog-img {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  display: block;
 }
 
 #andrew-photo {
@@ -146,18 +158,6 @@ figure:hover {
   background-color: #660708ff;
 }
 
-.project-img {
-  width: 100%;
-  max-width: 500px;
-}
-
-.blog-img {
-  width: 100%;
-  max-width: 500px;
-  margin: auto;
-  display: block;
-}
-
 @-webkit-keyframes introduction {
   0% {
     color: #0b090aff;
@@ -180,6 +180,7 @@ figure:hover {
   0% {
     color: #0b090aff;
     background-color: #0b090aff;
+    border: none;
   }
   100% {
     color: #ffffffff;
@@ -191,6 +192,7 @@ figure:hover {
   0% {
     color: #0b090aff;
     background-color: #0b090aff;
+    border: none;
   }
   100% {
     color: #ffffffff;
@@ -250,8 +252,8 @@ figure:hover {
           animation-duration: 5s;
   -webkit-animation-delay: 7s;
           animation-delay: 7s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
   padding: 10px;
   font-size: 25px;
   margin: auto;
@@ -263,6 +265,17 @@ figure:hover {
 
 #homepage-feature a {
   margin: auto;
+}
+
+article {
+  width: 80%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px auto;
+  padding: 10px;
+  border: 2px solid #d3d3d3ff;
+  background-color: #161a1dff;
 }
 
 .icon-flex {
@@ -302,26 +315,10 @@ figure:hover {
           justify-content: center;
 }
 
-.blog-preview {
-  margin: 10px;
-  border: 2px solid #d3d3d3ff;
-  padding: 10px;
-  background-color: #161a1dff;
-  width: 300px;
-}
-
 .date {
   text-align: right;
   font-size: 12px;
   color: #d3d3d3ff;
-}
-
-.blog-post {
-  width: 80%;
-  margin: auto;
-  padding: 10px;
-  border: 2px solid #d3d3d3ff;
-  background-color: #161a1dff;
 }
 
 .post-bar {
@@ -337,6 +334,21 @@ figure:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
+}
+
+#contact-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  border: 2px solid #d3d3d3ff;
+  background-color: #161a1dff;
 }
 
 label {
@@ -356,21 +368,6 @@ input {
 
 #submit:hover {
   background-color: #105e7fff;
-}
-
-#contact-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 80%;
-  margin: auto;
-  padding: 10px;
-  border: 2px solid #d3d3d3ff;
-  background-color: #161a1dff;
 }
 
 form {
@@ -409,6 +406,9 @@ textarea {
     border: 2px solid #d3d3d3ff;
     margin: 10px;
   }
+  .blog-preview {
+    width: 300px;
+  }
   .body-content {
     margin-left: 25%;
   }
@@ -443,12 +443,6 @@ textarea {
   }
   .body-content {
     margin-left: 0%;
-  }
-  article {
-    width: 80%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
   label {
     display: inline-block;
