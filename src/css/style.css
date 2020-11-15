@@ -13,7 +13,9 @@ h1 {
 }
 
 /* Basic Styling for other Headings */
-h2, h3, h4 {
+h2,
+h3,
+h4 {
   font-family: "Quicksand", Arial, sans-serif;
   text-align: center;
 }
@@ -225,6 +227,7 @@ figure:hover {
   }
 }
 
+/* Introduction Styling */
 #introduction {
   color: #0b090aff;
   min-height: 70vh;
