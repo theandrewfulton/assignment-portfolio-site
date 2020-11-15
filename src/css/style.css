@@ -1,31 +1,48 @@
+/* Colour Palette - From https:/*coolors.co/0b090a-161a1d-660708-a4161a-ba181b-050b61-105e7f-1c2f4a-d3d3d3-ffffff */
 /* SCSS HEX */
+/* Import Fonts from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+/* General Heading Styling */
+/* Name in Heading */
 h1 {
   font-family: "Caveat", cursive, sans-serif;
   text-align: center;
   font-size: 50px;
+  /* Not displayed on small screens */
   display: none;
 }
 
-h2, h3, h4 {
+/* Basic Styling for other Headings */
+h2,
+h3,
+h4 {
   font-family: "Quicksand", Arial, sans-serif;
   text-align: center;
 }
 
+/* General Anchor Styling (particularly for inline links and link buttons) */
 a {
   font-family: "Quicksand", Arial, sans-serif;
   text-decoration: none;
 }
 
+a:hover {
+  background-color: #105e7fff;
+}
+
+/* Basic Paragraph Styling */
 p {
   font-family: "Amiri", Georgia, serif;
 }
 
+/* Default styling for Body */
 body {
   background-color: #0b090aff;
   color: #ffffffff;
+  margin: 0;
 }
 
+/* Navigation */
 nav {
   position: fixed;
   top: 0;
@@ -57,10 +74,13 @@ nav {
   padding: 10px;
 }
 
+/* Hamburger Menu */
+/* hide checkbox  */
 #hamburger {
   display: none;
 }
 
+/* Styling for Link Button Class */
 .link-button {
   color: #ffffffff;
   text-decoration: none;
@@ -73,10 +93,7 @@ nav {
   margin: auto;
 }
 
-.link-button :hover {
-  background-color: #105e7fff;
-}
-
+/* Styling for Nav Button Class */
 .nav-button {
   color: #ffffffff;
   text-decoration: none;
@@ -87,23 +104,35 @@ nav {
   width: 150px;
 }
 
-.nav-button :hover {
-  background-color: #105e7fff;
+/* Styling for the active class, showing the user which page they are on */
+.active {
+  background-color: #161a1dff;
 }
 
+/* Styling for page name */
 .page-name {
   font-size: 40px;
   margin: 10px;
 }
 
+/* Footer */
 footer {
   width: 100%;
   text-align: center;
 }
 
+/* Pictures and Icons */
+/* basic styling for all images */
 img {
   border: 2px solid #d3d3d3ff;
   margin: auto;
+}
+
+.blog-img {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  display: block;
 }
 
 #andrew-photo {
@@ -120,6 +149,7 @@ img {
   display: block;
 }
 
+/* Figure wrapper for icons */
 figure {
   border: 2px solid #d3d3d3ff;
   margin: 10px;
@@ -134,46 +164,28 @@ figure p {
   color: #ffffffff;
 }
 
-#html5 {
-  background-color: #E34F26;
+/* Hover behaviour for figure */
+figure:hover {
+  background-color: #105e7fff;
 }
 
-#css3 {
-  background-color: #1572B6;
+/* Icon Backgrounds - alternating between red and blue */
+.icon1 {
+  background-color: #660708ff;
 }
 
-#linux {
-  background-color: #FCC624;
+.icon2 {
+  background-color: #105e7fff;
 }
 
-.twitter {
-  background-color: #1DA1F2;
+/* icon 2 is already blue so will highlight red when hovered over */
+.icon2:hover {
+  background-color: #660708ff;
 }
 
-.linkedin {
-  background-color: #0077B5;
-}
-
-#github {
-  background-color: #181717;
-}
-
-#gmail {
-  background-color: #D14836;
-}
-
-.project-img {
-  width: 100%;
-  max-width: 500px;
-}
-
-.blog-img {
-  width: 100%;
-  max-width: 500px;
-  margin: auto;
-  display: block;
-}
-
+/* Homepage */
+/* Introduction Section */
+/* Introduction animations */
 @-webkit-keyframes introduction {
   0% {
     color: #0b090aff;
@@ -182,7 +194,6 @@ figure p {
     color: #ffffffff;
   }
 }
-
 @keyframes introduction {
   0% {
     color: #0b090aff;
@@ -196,6 +207,7 @@ figure p {
   0% {
     color: #0b090aff;
     background-color: #0b090aff;
+    border: none;
   }
   100% {
     color: #ffffffff;
@@ -207,6 +219,7 @@ figure p {
   0% {
     color: #0b090aff;
     background-color: #0b090aff;
+    border: none;
   }
   100% {
     color: #ffffffff;
@@ -214,6 +227,7 @@ figure p {
   }
 }
 
+/* Introduction Styling */
 #introduction {
   color: #0b090aff;
   min-height: 70vh;
@@ -266,21 +280,37 @@ figure p {
           animation-duration: 5s;
   -webkit-animation-delay: 7s;
           animation-delay: 7s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
   padding: 10px;
   font-size: 25px;
   margin: auto;
 }
 
+/* Feature Heading */
 .feature-heading {
   text-align: center;
 }
 
+/* Feature Section */
 #homepage-feature a {
   margin: auto;
 }
 
+/* Article styling */
+article {
+  width: 80%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px auto;
+  padding: 10px;
+  border: 2px solid #d3d3d3ff;
+  background-color: #161a1dff;
+}
+
+/* About Page */
+/* Social Media Icons */
 .icon-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -296,6 +326,7 @@ figure p {
   padding: 20px;
 }
 
+/* History and Interests Section */
 #history-interests {
   width: 80%;
   margin: auto;
@@ -304,6 +335,7 @@ figure p {
   background-color: #161a1dff;
 }
 
+/* Projects Page */
 .blog-list {
   margin: 10px;
   padding: 10px;
@@ -318,28 +350,14 @@ figure p {
           justify-content: center;
 }
 
-.blog-preview {
-  margin: 10px;
-  border: 2px solid #d3d3d3ff;
-  padding: 10px;
-  background-color: #161a1dff;
-  width: 300px;
-}
-
+/* Blog Page */
 .date {
   text-align: right;
   font-size: 12px;
   color: #d3d3d3ff;
 }
 
-.blog-post {
-  width: 80%;
-  margin: auto;
-  padding: 10px;
-  border: 2px solid #d3d3d3ff;
-  background-color: #161a1dff;
-}
-
+/* buttons to navigate between posts */
 .post-bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -355,21 +373,8 @@ figure p {
   width: 100%;
 }
 
-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  vertical-align: top;
-}
-
-input {
-  margin: 5px;
-}
-
-#submit {
-  width: 100px;
-}
-
+/* Contact Page */
+/* Flexbox for arrangement of elements on Contact page */
 #contact-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -385,6 +390,31 @@ input {
   background-color: #161a1dff;
 }
 
+/* Form label above fields */
+label {
+  /* Moves labels from alongside to on top of fields */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* moves Your message label to top of message field */
+  vertical-align: top;
+}
+
+/* Space fields out */
+input {
+  margin: 5px;
+}
+
+/* styling for submit button */
+#submit {
+  width: 100px;
+}
+
+#submit:hover {
+  background-color: #105e7fff;
+}
+
+/* Form Alignment */
 form {
   margin: auto;
   text-align: center;
@@ -395,11 +425,14 @@ textarea {
   height: 150px;
 }
 
-@media only screen and (min-width: 768px) {
+/* Media Query for Tablets */
+@media only screen and (min-width: 768px) and (min-height: 300px) {
+  /* Show name heading and center for tablet view */
   h1 {
     display: block;
     margin-left: 25%;
   }
+  /*Adjust nav items menu for tablet view */
   .nav-items {
     width: 25%;
     height: 100%;
@@ -407,33 +440,44 @@ textarea {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 100px;
+    padding-top: 10vh;
   }
+  /* hide hamburger menu */
   .hamburger {
     display: none;
   }
+  /* show nav items even if the hamburger is not checked */
   #hamburger:not(:checked) ~ .nav-items {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
+  /* Change styling of nav button */
   .nav-button {
     border: 2px solid #d3d3d3ff;
     margin: 10px;
   }
+  .blog-preview {
+    width: 300px;
+  }
+  /* Avoid menu overlapping content in tablet view */
   .body-content {
     margin-left: 25%;
   }
 }
 
+/* Media Query for Large Screens */
 @media only screen and (min-width: 1280px) {
+  /* move content back over */
   .body-content {
     margin-left: 0px;
   }
+  /* adjust nav */
   nav {
     width: 100%;
     position: static;
   }
+  /* adjust nav-items */
   .nav-items {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -450,29 +494,28 @@ textarea {
     padding: 0;
     position: static;
   }
+  /* move name back over */
   h1 {
     margin-left: 0%;
   }
+  /* move body content back over */
   .body-content {
     margin-left: 0%;
   }
-  article {
-    width: 80%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+  /* Form label next to fields */
   label {
     display: inline-block;
     width: 130px;
     text-align: right;
   }
+  /* Move icons to the side */
   #contact-flex {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  /* Make icons vertical */
   #contact-icons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
