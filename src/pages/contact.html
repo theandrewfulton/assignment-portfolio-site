@@ -3,10 +3,11 @@
 <!-- html in the head is not rendered on the page -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Andrew Fulton | Contact</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css"
+        integrity="sha512-KLh37nmJ+o32izKaToCwNXwrJ2A85JpqbpxHYC90uKvzXh3gYAKty/U0JY7O/bylbH1HQqKQoCWBKrsLwPaQvA==" />
     <link rel="shortcut icon" href="../img/icons/favicon.ico" />
 </head>
 <!-- html in the body is rendered on the page -->
@@ -17,8 +18,8 @@
         <h1>Andrew Fulton</h1>
         <!-- navbar to appear at the top of every page -->
         <nav>
-            <label class="hamburger" for="hamburger" alt="icon for menu">&#9776;</label>
-            <input type="checkbox" id="hamburger" />
+            <label class="hamburger" for="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger" role="button" />
             <div class="nav-items">
                 <a class="nav-button" href="../index.html">Home</a>
                 <a class="nav-button" href="about.html">About</a>
@@ -38,19 +39,19 @@
             <section class="icon-flex" id="contact-icons">
                 <figure class="icon1">
                     <a href="https://twitter.com/theandrewfulton" target="_blank"><img class="icon"
-                            src="../img/icons/twitter.svg" alt="Twitter">
+                            src="../img/icons/twitter.svg" alt="Twitter" />
                         <p>Twitter</p>
                     </a>
                 </figure>
                 <figure class="icon2">
-                    <a href="mailto:theandrewfulton@gmail.com?subject = Hello&body = Message"><img class="icon"
-                            src="../img/icons/gmail.svg" alt="Email">
+                    <a href="mailto:theandrewfulton@gmail.com?subject=Hello&body=Message"><img class="icon"
+                            src="../img/icons/gmail.svg" alt="Email" />
                         <p>Email</p>
                     </a>
                 </figure>
                 <figure class="icon1">
                     <a href="https://www.linkedin.com/in/andrew-fulton-a713941b0/" target="_blank"><img class="icon"
-                            src="../img/icons/linkedin.svg" alt="LinkedIn">
+                            src="../img/icons/linkedin.svg" alt="LinkedIn" />
                         <p>LinkedIn</p>
                     </a>
                 </figure>
@@ -58,14 +59,14 @@
             <!-- webform -->
             <form>
                 <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname" value="John"><br>
+                <input type="text" id="fname" name="fname" value="John" /><br />
                 <label for="lname">Last name:</label>
-                <input type="text" id="lname" name="lname" value="Smith"><br>
+                <input type="text" id="lname" name="lname" value="Smith" /><br />
                 <label for="email">Email address:</label>
-                <input type="text" id="email" name="email" value="name@example.com"><br>
+                <input type="text" id="email" name="email" value="name@example.com" /><br />
                 <label for="message">Your message:</label>
-                <textarea name="message">Hello there!</textarea><br><br>
-                <input id="submit" class="link-button" type="submit" value="Submit">
+                <textarea name="message" id="message">Hello there!</textarea><br /><br />
+                <input id="submit" class="link-button" type="submit" value="Submit" />
             </form>
         </section>
         <!-- Footer content to appear at the bottom of every page-->
