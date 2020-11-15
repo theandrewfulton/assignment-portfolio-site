@@ -1,4 +1,4 @@
-// Colour Palette - From https://coolors.co/0b090a-161a1d-660708-a4161a-ba181b-050b61-105e7f-1c2f4a-d3d3d3-ffffff
+/* Colour Palette - From https:/*coolors.co/0b090a-161a1d-660708-a4161a-ba181b-050b61-105e7f-1c2f4a-d3d3d3-ffffff */
 /* SCSS HEX */
 $background-colour: #0b090aff; 
 $element-background: #161a1dff;
@@ -8,24 +8,24 @@ $highlight-blue: #105e7fff;
 $border-colour: #d3d3d3ff;
 $text-colour: #ffffffff;
 
-// Import Fonts from Google Fonts
+/* Import Fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-// General Heading Styling
-// Name in Heading
+/* General Heading Styling */
+/* Name in Heading */
 h1 {
     font-family: "Caveat", cursive, sans-serif;
     text-align: center;
     font-size: 50px;
-    // Not displayed on small screens
+    /* Not displayed on small screens */
     display: none;
 }
-// Basic Styling for other Headings
+/* Basic Styling for other Headings */
 h2, h3, h4{
     font-family: "Quicksand", Arial, sans-serif;
     text-align: center;
 }
-// General Anchor Styling (particularly for inline links and link buttons)
+/* General Anchor Styling (particularly for inline links and link buttons) */
 a {
     font-family: "Quicksand", Arial, sans-serif;
     text-decoration: none;
@@ -33,18 +33,18 @@ a {
 a:hover {
     background-color: $highlight-blue;
 }
-// Basic Paragraph Styling
+/* Basic Paragraph Styling */
 p {
     font-family: "Amiri", Georgia, serif;
 }
 
-// Default styling for Body
+/* Default styling for Body */
 body {
     background-color: $background-colour;
     color: $text-colour;
     margin: 0;
 }
-// Navigation
+/* Navigation */
 nav {
     position: fixed;
     top: 0;
@@ -65,12 +65,12 @@ nav {
         font-size: 1.2em;
         padding: 10px;
     }
-// Hamburger Menu
-// hide checkbox
+/* Hamburger Menu */
+/* hide checkbox  */
 #hamburger {
     display: none;
 }
-// Styling for Link Button Class
+/* Styling for Link Button Class */
 .link-button {
     color: $text-colour;
     text-decoration: none;
@@ -82,7 +82,7 @@ nav {
     width: 150px;
     margin: auto;
 }
-// Styling for Nav Button Class
+/* Styling for Nav Button Class */
 .nav-button {
     color: $text-colour;
     text-decoration: none;
@@ -92,23 +92,22 @@ nav {
     background-color: $highlight-red;
     width: 150px;
     }
-// Styling for the active class, showing the user which page they are on
+/* Styling for the active class, showing the user which page they are on */
 .active {
     background-color: $element-background;
 }
-// Styling for page name
+/* Styling for page name */
 .page-name {
     font-size: 40px;
     margin: 10px;
 }
-// Footer
+/* Footer */
 footer {
     width: 100%;
     text-align: center;
-    // background-color: $background-colour;
 }
-// Pictures and Icons
-// basic styling for all images
+/* Pictures and Icons */
+/* basic styling for all images */
 img {
     border: 2px solid $border-colour;
     margin: auto;
@@ -131,7 +130,7 @@ img {
     margin: 10px;
     display: block;
 }
-// Figure wrapper for icons
+/* Figure wrapper for icons */
 figure {
     border: 2px solid $border-colour;
     margin: 10px;
@@ -144,26 +143,26 @@ figure {
         color: $text-colour;
     }
 }
-// Hover behaviour for figure
+/* Hover behaviour for figure */
 figure:hover {
     background-color: $highlight-blue;
 }
-// Icon Backgrounds - alternating between red and blue
+/* Icon Backgrounds - alternating between red and blue */
 .icon1 {
     background-color: $highlight-red;
 }
 .icon2 {
     background-color: $highlight-blue;
 }
-// icon 2 is already blue so will highlight red when hovered over
+/* icon 2 is already blue so will highlight red when hovered over */
 .icon2:hover {
     background-color: $highlight-red;
 }
-// Homepage
+/* Homepage */
 
-// Introduction Section
+/* Introduction Section */
 
-// Introduction animations
+/* Introduction animations */
 @keyframes introduction {
     0% {color: $background-colour;}
     100% {color: $text-colour;}
@@ -175,7 +174,6 @@ figure:hover {
 
 #introduction {
     color: $background-colour;
-    // issues with 80vh and tablet sizes - revisit
     min-height: 70vh;
     text-align: center;
     margin-bottom: 50px;
@@ -213,17 +211,17 @@ figure:hover {
         margin: auto;
     }
 
-// Feature Heading
+/* Feature Heading */
 .feature-heading {
     text-align: center;
     }
-// Feature Section
+/* Feature Section */
 #homepage-feature {
     a {
         margin: auto;
     }
 }
-// Article styling
+/* Article styling */
 article {
     width: 80%;
     justify-content:center;
@@ -233,8 +231,8 @@ article {
     background-color: $element-background;
 }
 
-// About Page
-// Social Media Icons
+/* About Page */
+/* Social Media Icons */
 .icon-flex {
     display: flex;
     flex-wrap: wrap;
@@ -242,7 +240,7 @@ article {
   justify-content: space-evenly;
   padding: 20px;
 }
-// History and Interests Section
+/* History and Interests Section */
 #history-interests{
     width: 80%;
     margin: auto;
@@ -250,7 +248,7 @@ article {
     border: 2px solid $border-colour;
     background-color: $element-background;
 }
-// Projects Page
+/* Projects Page */
 .blog-list {
     margin: 10px;
     padding: 10px;
@@ -259,13 +257,13 @@ article {
     flex-wrap: wrap;
     justify-content: center;
 }
-// Blog Page
+/* Blog Page */
 .date {
     text-align: right;
     font-size: 12px;
     color: $border-colour;
 }
-// buttons to navigate between posts
+/* buttons to navigate between posts */
 .post-bar {
     display: flex;
     align-items: center;
@@ -273,8 +271,8 @@ article {
     flex-wrap: wrap;
     width: 100%;
 }
-// Contact Page
-// Flexbox for arrangement of elements on Contact page
+/* Contact Page */
+/* Flexbox for arrangement of elements on Contact page */
 #contact-flex {
     display: flex;
     flex-direction: column;
@@ -284,25 +282,25 @@ article {
     border: 2px solid $border-colour;
     background-color: $element-background;
 }
-// Form label above fields
+/* Form label above fields */
 label {
-    // Moves labels from alongside to on top of fields
+    /* Moves labels from alongside to on top of fields */
     display: flex;
-    // moves Your message label to top of message field
+    /* moves Your message label to top of message field */
     vertical-align: top;
 }
-// Space fields out
+/* Space fields out */
 input {
     margin: 5px;
 }
-// styling for submit button
+/* styling for submit button */
 #submit {
     width: 100px;
 }
 #submit:hover {
     background-color: $highlight-blue;
 }
-// // Form Alignment
+/* Form Alignment */
 form {
     margin: auto;
     text-align: center   
@@ -311,14 +309,14 @@ textarea {
     width: 221px;
     height: 150px;
 }
-// Media Query for Tablets
+/* Media Query for Tablets */
 @media only screen and (min-width: 768px) and (min-height: 300px) {
-    // Show name heading and center for tablet view
+    /* Show name heading and center for tablet view */
     h1 {
         display: block;
         margin-left: 25%;
     }
-    //Adjust nav items menu for tablet view 
+    /*Adjust nav items menu for tablet view */
     .nav-items {
         width: 25%;
         height: 100%;
@@ -326,13 +324,13 @@ textarea {
         align-items: center;
         padding-top: 10vh;
     }
-    // hide hamburger menu
+    /* hide hamburger menu */
     .hamburger { 
         display: none;
     }
-    // show nav items even if the hamburger is not checked
+    /* show nav items even if the hamburger is not checked */
     #hamburger:not(:checked) ~ .nav-items { display: flex; }
-    // Change styling of nav button
+    /* Change styling of nav button */
     .nav-button {
         border: 2px solid $border-colour;
         margin: 10px;
@@ -340,23 +338,23 @@ textarea {
     .blog-preview {
         width: 300px;
     }
-    // Avoid menu overlapping content in tablet view
+    /* Avoid menu overlapping content in tablet view */
     .body-content {
         margin-left: 25%;
     }
 }
-// Media Query for Large Screens
+/* Media Query for Large Screens */
 @media only screen and (min-width: 1280px) {
-// move content back over
+/* move content back over */
     .body-content {
     margin-left: 0px;
 }
-// adjust nav
+/* adjust nav */
 nav {
     width: 100%;
     position: static;
 }
-// adjust nav-items
+/* adjust nav-items */
 .nav-items {
     align-items: center;
     justify-content: space-evenly;
@@ -366,27 +364,27 @@ nav {
     padding: 0;
     position: static;
 }
-// move name back over
+/* move name back over */
 h1 {
     margin-left: 0%;
 }
-//    move body content back over
+/* move body content back over */
    .body-content {
     margin-left: 0%;
 }
 
-// Form label next to fields
+/* Form label next to fields */
 label {
     display: inline-block;
     width: 130px;
     text-align: right;
 }
 
-// Move icons to the side
+/* Move icons to the side */
 #contact-flex {
     flex-direction: row;
 }
-// Make icons vertical
+/* Make icons vertical */
 #contact-icons {
     flex-direction: column;
 }

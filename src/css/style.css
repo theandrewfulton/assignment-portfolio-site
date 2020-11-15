@@ -1,17 +1,24 @@
+/* Colour Palette - From https:/*coolors.co/0b090a-161a1d-660708-a4161a-ba181b-050b61-105e7f-1c2f4a-d3d3d3-ffffff */
 /* SCSS HEX */
+/* Import Fonts from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+/* General Heading Styling */
+/* Name in Heading */
 h1 {
   font-family: "Caveat", cursive, sans-serif;
   text-align: center;
   font-size: 50px;
+  /* Not displayed on small screens */
   display: none;
 }
 
+/* Basic Styling for other Headings */
 h2, h3, h4 {
   font-family: "Quicksand", Arial, sans-serif;
   text-align: center;
 }
 
+/* General Anchor Styling (particularly for inline links and link buttons) */
 a {
   font-family: "Quicksand", Arial, sans-serif;
   text-decoration: none;
@@ -21,16 +28,19 @@ a:hover {
   background-color: #105e7fff;
 }
 
+/* Basic Paragraph Styling */
 p {
   font-family: "Amiri", Georgia, serif;
 }
 
+/* Default styling for Body */
 body {
   background-color: #0b090aff;
   color: #ffffffff;
   margin: 0;
 }
 
+/* Navigation */
 nav {
   position: fixed;
   top: 0;
@@ -62,10 +72,13 @@ nav {
   padding: 10px;
 }
 
+/* Hamburger Menu */
+/* hide checkbox  */
 #hamburger {
   display: none;
 }
 
+/* Styling for Link Button Class */
 .link-button {
   color: #ffffffff;
   text-decoration: none;
@@ -78,6 +91,7 @@ nav {
   margin: auto;
 }
 
+/* Styling for Nav Button Class */
 .nav-button {
   color: #ffffffff;
   text-decoration: none;
@@ -88,20 +102,25 @@ nav {
   width: 150px;
 }
 
+/* Styling for the active class, showing the user which page they are on */
 .active {
   background-color: #161a1dff;
 }
 
+/* Styling for page name */
 .page-name {
   font-size: 40px;
   margin: 10px;
 }
 
+/* Footer */
 footer {
   width: 100%;
   text-align: center;
 }
 
+/* Pictures and Icons */
+/* basic styling for all images */
 img {
   border: 2px solid #d3d3d3ff;
   margin: auto;
@@ -128,6 +147,7 @@ img {
   display: block;
 }
 
+/* Figure wrapper for icons */
 figure {
   border: 2px solid #d3d3d3ff;
   margin: 10px;
@@ -142,10 +162,12 @@ figure p {
   color: #ffffffff;
 }
 
+/* Hover behaviour for figure */
 figure:hover {
   background-color: #105e7fff;
 }
 
+/* Icon Backgrounds - alternating between red and blue */
 .icon1 {
   background-color: #660708ff;
 }
@@ -154,10 +176,14 @@ figure:hover {
   background-color: #105e7fff;
 }
 
+/* icon 2 is already blue so will highlight red when hovered over */
 .icon2:hover {
   background-color: #660708ff;
 }
 
+/* Homepage */
+/* Introduction Section */
+/* Introduction animations */
 @-webkit-keyframes introduction {
   0% {
     color: #0b090aff;
@@ -166,7 +192,6 @@ figure:hover {
     color: #ffffffff;
   }
 }
-
 @keyframes introduction {
   0% {
     color: #0b090aff;
@@ -259,14 +284,17 @@ figure:hover {
   margin: auto;
 }
 
+/* Feature Heading */
 .feature-heading {
   text-align: center;
 }
 
+/* Feature Section */
 #homepage-feature a {
   margin: auto;
 }
 
+/* Article styling */
 article {
   width: 80%;
   -webkit-box-pack: center;
@@ -278,6 +306,8 @@ article {
   background-color: #161a1dff;
 }
 
+/* About Page */
+/* Social Media Icons */
 .icon-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -293,6 +323,7 @@ article {
   padding: 20px;
 }
 
+/* History and Interests Section */
 #history-interests {
   width: 80%;
   margin: auto;
@@ -301,6 +332,7 @@ article {
   background-color: #161a1dff;
 }
 
+/* Projects Page */
 .blog-list {
   margin: 10px;
   padding: 10px;
@@ -315,12 +347,14 @@ article {
           justify-content: center;
 }
 
+/* Blog Page */
 .date {
   text-align: right;
   font-size: 12px;
   color: #d3d3d3ff;
 }
 
+/* buttons to navigate between posts */
 .post-bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -336,6 +370,8 @@ article {
   width: 100%;
 }
 
+/* Contact Page */
+/* Flexbox for arrangement of elements on Contact page */
 #contact-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -351,17 +387,22 @@ article {
   background-color: #161a1dff;
 }
 
+/* Form label above fields */
 label {
+  /* Moves labels from alongside to on top of fields */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* moves Your message label to top of message field */
   vertical-align: top;
 }
 
+/* Space fields out */
 input {
   margin: 5px;
 }
 
+/* styling for submit button */
 #submit {
   width: 100px;
 }
@@ -370,6 +411,7 @@ input {
   background-color: #105e7fff;
 }
 
+/* Form Alignment */
 form {
   margin: auto;
   text-align: center;
@@ -380,11 +422,14 @@ textarea {
   height: 150px;
 }
 
+/* Media Query for Tablets */
 @media only screen and (min-width: 768px) and (min-height: 300px) {
+  /* Show name heading and center for tablet view */
   h1 {
     display: block;
     margin-left: 25%;
   }
+  /*Adjust nav items menu for tablet view */
   .nav-items {
     width: 25%;
     height: 100%;
@@ -394,14 +439,17 @@ textarea {
             align-items: center;
     padding-top: 10vh;
   }
+  /* hide hamburger menu */
   .hamburger {
     display: none;
   }
+  /* show nav items even if the hamburger is not checked */
   #hamburger:not(:checked) ~ .nav-items {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
+  /* Change styling of nav button */
   .nav-button {
     border: 2px solid #d3d3d3ff;
     margin: 10px;
@@ -409,19 +457,24 @@ textarea {
   .blog-preview {
     width: 300px;
   }
+  /* Avoid menu overlapping content in tablet view */
   .body-content {
     margin-left: 25%;
   }
 }
 
+/* Media Query for Large Screens */
 @media only screen and (min-width: 1280px) {
+  /* move content back over */
   .body-content {
     margin-left: 0px;
   }
+  /* adjust nav */
   nav {
     width: 100%;
     position: static;
   }
+  /* adjust nav-items */
   .nav-items {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -438,23 +491,28 @@ textarea {
     padding: 0;
     position: static;
   }
+  /* move name back over */
   h1 {
     margin-left: 0%;
   }
+  /* move body content back over */
   .body-content {
     margin-left: 0%;
   }
+  /* Form label next to fields */
   label {
     display: inline-block;
     width: 130px;
     text-align: right;
   }
+  /* Move icons to the side */
   #contact-flex {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  /* Make icons vertical */
   #contact-icons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
