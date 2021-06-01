@@ -1,14 +1,14 @@
 # Portfolio Site
 
-Git Repository for my Portfolio website
+Git Repository for the Portfolio website I completed for an assignment at [Coder Academy](https://coderacademy.edu.au/)
 
 ## Git Repository
 
-[https://github.com/theandrewfulton/portfolio-site](https://github.com/theandrewfulton/portfolio-site)
+[https://github.com/theandrewfulton/assignment-portfolio-site](https://github.com/theandrewfulton/assignment-portfolio-site)
 
 ## Link to Portfolio
 
-The published portfolio site can be found [here](https://theandrewfulton.netlify.app).
+The published portfolio site can be found [here](https://theandrewfulton-assignment.netlify.app).
 
 ## Purpose
 
@@ -34,7 +34,7 @@ The portfolio is written in HTML5, with styling in SASS, which is then transpile
 
 ## Project Management
 
-Planning this project took place Trello. You can view the Trello Board for the portfolio site [here](https://trello.com/b/llUT3AXU/portfolio-site).
+Planning this project took place Trello. You can view the Trello Board for the portfolio site [here](https://trello.com/b/llUT3AXU/assignment-portfolio-site).
 
 Here is a screenshot of this board, taken during this project:
 ![trello-screenshot](docs/screenshots/README/trello-screenshot.png)
@@ -222,3 +222,4 @@ A Featured Project section was added. Before this was added the homepage seemed 
 ### Projects and Blog
 
 It was found that having the articles narrow enough to fit two abreast on a tablet made them too narrow to comfortably navigate. If a tablet is used in landscape, two articles appear side by side.
+
